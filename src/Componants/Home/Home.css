@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.Homecontainer {
+    margin: 0;
+    padding: 0;
+}
+
+/* This is navbar styling css and ill mark end also at the end of css navbar styling */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.navbaroption {
+    display: flex;
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+.navbaroption li {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logoimg {
+    position: relative;
+    top: 2px;
+    right: 132px;
+
+}
+
+.logoimg img {
+    display: inline-block;
+    width: 208.16px;
+    height: 73px;
+    border: 1px solid white;
+}
+
+.subsbtn {
+    position: relative;
+    right: 40px;
+}
+
+.subsbtn button {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 126px;
+    height: 44px;
+    padding: 12px, 20px, 12px, 20px;
+    border-radius: 50px;
+    border: 1px solid #F2435E;
+    color: #F2435E;
+    background-color: white;
+}
+
+/* Base Styles */
+/* Homecontainer, Navbar and other default styles remain unchanged */
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbaroption {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navbaroption li {
+        margin: 5px 0;
+    }
+
+    .logoimg {
+        margin: 10px 0;
+        right: auto; /* Reset right positioning */
+    }
+
+    .subsbtn {
+        margin: 10px 0;
+        right: auto; /* Reset right positioning */
+    }
+
+    .subsbtn button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbaroption li {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin: 5px 0;
+    }
+
+    .logoimg img {
+        width: 150px; /* Adjust logo size for smaller screens */
+        height: auto;
+    }
+
+    .subsbtn button {
+        font-size: 16px; /* Adjust button font size */
+        width: 100%;
+        padding: 10px;
+    }
+}
