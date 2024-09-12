@@ -1,0 +1,75 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: 50px 0;
+  gap: 25px;
+}
+
+.header{
+  font-family: "poppins", sans-serif;
+  color: rgba(42, 42, 42, 1);
+
+  h1{
+    font-size: 72px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.gradientText {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px; 
+    height: 6px; 
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(242, 67, 94, 1));
+  }
+}
+
+
+.description{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+
+  p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.btn{
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 150px;
+  height: 24px;
+  border-radius: 50px;
+  padding: 18px 25px;
+  background-color: #F2435E;
+  border: 1px solid #F2435E;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+}
