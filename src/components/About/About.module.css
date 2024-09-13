@@ -1,11 +1,13 @@
 .about{
-    height: 380px;
+    height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+    gap: 30px;
+    margin: 50px 0px;
 
     h2{
-        position: relative;
-        top: -10px;
-        font-family: "Nunito", sans-serif;
         font-size: 16px;
         font-weight: 600;
         color: #F2435E;
@@ -17,36 +19,42 @@
 }
 
 .content{
-    
-    text-align: center;
-    width: 684px;
-    position: relative;
-    left: 340px;
-    top: 5px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+
 }
 
 .header{
-    
+    display: flex;
+    width: 50%;
 
     h1{
         font-family: "Poppins",sans-serif;
         font-size: 52px;
         font-weight: 600;
-        
-        line-height: 25px;
+        text-align: center;
+        margin: 0;
+        line-height: 1.2;
     }
 }
 
-.para_one{
-    position: relative;
-    top: 22px;
-    
-    .p{
-        font-family: "Nunito", sans-serif;
+.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    gap: 30px;
+
+    p{
         font-size: 18px;
         font-weight: 400;
-        color: #2A2A2A;
-        line-height: 200px;
+        color: #2a2a2a;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
     }
 }
