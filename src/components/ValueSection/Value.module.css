@@ -1,0 +1,102 @@
+.value{
+    width: 100%;
+    height: 500px;
+
+    h2{
+        font-family: "Nunito", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 12px;
+        color: #F2435E;
+        position: relative;
+        left: 44px;
+    }
+}
+
+.mainvalue{
+    display: flex;
+    
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+    
+}
+
+.heading{
+    
+    position: relative;
+    left: 40px;
+    
+    h1{
+        
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 20px;
+        position: relative;
+        bottom: 22px;
+
+    }
+}
+
+.mainvalue_section{
+    width: 750px;
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 70px;
+    
+}
+
+.value_row1{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise,.process,.motto,.purpose{
+    
+    display: flex;
+    flex-direction: row;
+
+    img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    h1{
+        font-family: "Nunito",sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.expertise_section,.process_section,.motto_section,.purpose_section{
+    
+    h1{
+        font-family: "Nunito",sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+       
+        position: relative;
+        display: inline;
+        left: 10px;
+        color: #2A2A2A;
+    }
+
+    p{
+        font-family: "Nunito",sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+       
+        position: relative;
+        left: 10px;
+        line-height: 25px;
+        color: #424242;
+    }
+}
+

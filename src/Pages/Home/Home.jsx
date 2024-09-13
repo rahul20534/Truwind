@@ -16,7 +16,7 @@ const Home = () => {
       <Hero />
       <PhotoGrid />
       <About />
-      <Value/>
+      <Value></Value>
      
     </div>
   )

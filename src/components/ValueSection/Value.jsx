@@ -8,11 +8,15 @@ const Value = () => {
     return (
         <>
             <div className={Styles.value}>
-                <h1>Our Values</h1>
+                <h2>Our Values</h2>
 
                 <div className={Styles.mainvalue}>
-                    <h1>We promise the best </h1>
-                    <h1>values in a community</h1>
+                    <div className={Styles.heading}>
+                        <h1>We promise the best </h1>
+                        <h1>values in a community</h1>
+                    </div>
+
+
 
                     <div className={Styles.mainvalue_section}>
                         <div className={Styles.value_row1}>
@@ -41,7 +45,7 @@ const Value = () => {
 
                         </div>
 
-                        <div className={Styles.value.row2}>
+                        <div className={Styles.value_row2}>
                             <div className={Styles.purpose}>
                                 <img src={Arrowlogo} alt="Logo" />
                                 <div className={Styles.purpose_section}>
