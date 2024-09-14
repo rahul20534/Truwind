@@ -1,102 +1,86 @@
-.value{
-    width: 93%;
-    height: 500px;
-    
+.valueContainer {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0px 70px;
+  gap: 20px;
+  margin: 50px 0px;
 
-    h2{
-        font-family: "Nunito", sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: underline;
-        text-underline-offset: 12px;
-        color: #F2435E;
-        position: relative;
-        left: 44px;
-    }
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: #F2435E;
+  }
 }
 
-.mainvalue{
-    display: flex;
-    
-    flex-direction: row;
-    position: relative;
-    top: 20px;
-    
+.mainContainer {
+  display: flex;
+
 }
 
-.heading{
-    
-    position: relative;
-    left: 40px;
-    
-    h1{
-        
-        font-family: "Poppins", sans-serif;
-        font-size: 40px;
-        font-weight: 600;
-        line-height: 20px;
-        position: relative;
-        bottom: 18px;
-
-    }
+.heading {
+  width: 40%;
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+  }
 }
 
-.mainvalue_section{
-    width: 700px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: 70px;
-    
+.ValueSection {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 
-.value_row1{
-    
-    display: flex;
-    flex-direction: column;
+.part{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
 }
 
-.expertise,.process,.motto,.purpose{
-    
-    display: flex;
-    flex-direction: row;
+.value {
+
+  display: flex;
+  gap: 25px;
+
+  .logoContainer{
+    width: 50px;
+    height: 50px;
 
     img{
-        width: 35px;
-        height: 35px;
-        border-radius: 50px;
-        padding: 10px;
+      height: 100%;
+      width: 50px;
+      object-fit: cover;
     }
+  }
+
+  .valueDesc{
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
 
     h1{
-        font-family: "Nunito",sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-    }
-}
-
-.expertise_section,.process_section,.motto_section,.purpose_section{
-    
-    h1{
-        font-family: "Nunito",sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-       
-        position: relative;
-        display: inline;
-        left: 10px;
-        color: #2A2A2A;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
     }
 
     p{
-        font-family: "Nunito",sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-       
-        position: relative;
-        left: 10px;
-        line-height: 25px;
-        color: #424242;
+      font-size: 16px;
+      font-weight: 400;
+      color: #2a2a2a;
+      margin: 0;
     }
+  }
 }
-

@@ -1,33 +1,96 @@
 .leader{
-    border: 2px solid red;
-    
-    h1{
-        font-size: 16px;
-        font-family: "Nunito",sans-serif;
-        font-weight: 600;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        color: #F2435E;
-        text-align: center;
-    }
-}
+                    
+                    height: 600px;
+                    text-align: center;
 
-.heading{
-    border: 2px solid red;
+                    h2{
+                                        font-size: 16px;
+                                        font-family: "Nunito",sans-serif;
+                                        font-weight: 600;
+                                        text-decoration: underline;
+                                        text-underline-offset: 10px;
+                                        color: #F2435E;
+                                        margin-top: 40px;
+                    }
 
-    h1{
-        font-family: "Poppins",sans-serif;
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 27px;
-        text-decoration: none;
-        color: black;
-    }
+                    h1{
+                                        font-family: "Poppins",sans-serif;
+                                        font-size: 48px;
+                                        font-weight: 600;
+                                        line-height: 2px;
+                                        margin-top: 50px;
+                    }
 }
 
 .video{
-    border: 2px solid red;
-    display: flex;
-    flex-direction: row;
-    
+                    
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 70px;
+
+}
+
+.image{
+                   
+                    height: 300px;
+                    width: 500px;
+                    margin-left: 100px;
+                    margin-right:140px ;
+                    
+
+                    .img1{
+                                        width: 500px;
+                                        height: 300px;
+                                        border-radius: 10px;
+                                        z-index: -1;
+
+                    }
+
+                    .img2{
+                                        width: 22px;
+                                        height: 26.93px;
+                                        position: relative;
+                                        bottom: 175px;
+                                        left: 10px;
+                                        background-color: rgb(236, 230, 230);
+                                        border: 2px solid white;
+                                        border-radius: 50%;
+                                        padding-left: 12px;
+                                        padding-top: 9px;
+                                        padding-bottom: 9px;
+                                        padding-right: 10px;
+                                        opacity: 0.5;
+
+                    }
+}
+
+.founder{
+                   
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 500px;
+                    height: 230px;
+                    margin-right: 100px;
+
+                    h1{
+                                        font-family: "Nunito",sans-serif;
+                                        font-size: 22px;
+                                        font-weight: 700;
+                                        color: #F2435E;
+
+                                        span{
+                                                            font-family: "Nunito","italic",sans-serif,;
+                                                            font-weight: 200;
+                                                            font-size: 18px;
+                                                            color: #F2435E;
+                                        }
+                    }
+                    p{
+                                        font-family: "Nunito",sans-serif;
+                                        font-size: 18px;
+                                        font-weight: 500;  
+                                        line-height: 20px;     
+                                        color: #424242;
+                    }
 }

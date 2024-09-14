@@ -3,12 +3,16 @@ import React from 'react'
 //styles
 import styles from './Home.module.css'
 
+
 //components
 import Hero from '../../components/Hero/Hero'
 import PhotoGrid from '../../components/PhotoGrid/PhotoGrid'
 import About from '../../components/About/About'
 import Value from '../../components/ValueSection/Value';
-import Leader from '../../components/Leader/Leader';
+import Leader from '../../components/Leader/Leader'
+import Event from '../../components/Event/Event';
+import CommunityCard from '../../components/CommunityCard/CommunityCard';
+import Testinomal from '../../components/Testinomal/Testinomal'
 
 
 const Home = () => {
@@ -19,6 +23,9 @@ const Home = () => {
       <About />
       <Value></Value>
       <Leader></Leader>
+      <Event></Event>
+      <CommunityCard></CommunityCard>
+      <Testinomal></Testinomal>
      
     </div>
   )
