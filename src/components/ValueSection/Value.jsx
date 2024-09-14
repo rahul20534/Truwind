@@ -16,7 +16,8 @@ const Value = () => {
 
       <div className={styles.mainContainer}>
         <div className={styles.heading}>
-          <h1>We promise the best values in a community</h1>
+          <h1>We promise the best</h1>
+          <h1>values in a community</h1>
         </div>
 
         <div className={styles.ValueSection}>
