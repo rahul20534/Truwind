@@ -1,0 +1,121 @@
+.event{
+         
+         display: flex;
+         flex-direction: column;
+         height: 600px;
+         padding: 70px 100px 70px 100px;
+         text-align: center;
+         align-items: center;
+         
+         
+       h2{
+                    font-family: "Nunito",sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #F2435E;
+                    text-decoration: underline;
+                    text-underline-offset: 10px;
+                    
+       }
+
+       h1{
+                    font-family: "Poppins",sans-serif;
+                    font-size: 52px;
+                    font-weight: 600;
+                    line-height: 10px;
+       }
+       p{
+                    font-family: "Nunito",sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    height: 75px;
+                    width: 500px;
+                   
+                    line-height: 20px;
+
+       }
+         
+}
+
+.event_image{
+                    
+                    display: flex;
+                    flex-direction: row;
+                    height: 300px;
+                    margin-top: 40px;
+
+
+                    img{
+                                        width: 500px;
+                                        height: 300px;
+                                        margin-left: 100px;
+                                        margin-right:140px ;
+                    }
+
+                    
+}
+
+.event_text{
+                    
+                    display:flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 500px;
+                    height: 230px;
+                    margin-right: 100px;
+                    margin-top: 30px;
+
+                    h1{
+                                        font-size: 22px;
+                                        font-family: "Nunito",sans-serif;
+                                        font-weight: 700;
+                    }
+
+                    h2{
+                                        font-size: 22px;
+                                        font-family: "Nunito",sans-serif;
+                                        font-weight: 500; 
+                                        font-style: italic;  
+                                        text-decoration: none; 
+                                        color: black;
+                                        line-height: 1px; 
+                    }
+
+                    p{
+                                        font-size: 18px;
+                                        font-family: "Nunito",sans-serif;
+                                        font-weight: 500; 
+                                        margin-top: 40px;
+                                        width: 390px;
+                    }
+}
+
+.btn{
+                    display: flex;
+                    flex-direction: row;
+
+                    button{
+                                        font-size: 15px;
+                                        font-family: "Nunito",sans-serif;
+                                        font-weight: 600;   
+                                        width: 140px;
+                                        height: 40px;
+                                        border-radius: 50px; 
+                                        padding-right: 30px;
+                                        color: white;
+                                        background-color: #F2435E;
+                                        border: 1px solid #F2435E;
+                    
+                                                
+                    }
+
+                    h1{
+                                        font-size: 15px;
+                                        font-family: "Raleway",sans-serif;
+                                        font-weight: 600; 
+                                        text-decoration: underline;
+                                        color: #F2435E;
+                                        margin-left: 50px;
+                                        margin-top: 15px;
+                    }
+}
