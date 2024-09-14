@@ -1,0 +1,33 @@
+.leader{
+    border: 2px solid red;
+    
+    h1{
+        font-size: 16px;
+        font-family: "Nunito",sans-serif;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        color: #F2435E;
+        text-align: center;
+    }
+}
+
+.heading{
+    border: 2px solid red;
+
+    h1{
+        font-family: "Poppins",sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 27px;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.video{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    
+}
