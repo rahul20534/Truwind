@@ -1,93 +1,101 @@
-.CommunityCard{
-                    border: 2px solid red;
-                    width: 98%;
-                    height: 550px;
-                    display: flex;
-                    flex-direction: row;
-                    border-radius: 30px;
-                    background-color:  #4d0c7f ;
+.community {
 
-                   
-                    
+    width: 98%;
+    height: 550px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(265.92deg, #1C1835 -9.54%, #72154E 42.46%, #471B5B 96.71%);
+
+
 }
 
-.text{
-                    border: 2px solid red;
-                    display: flex;
-                    flex-direction: column;
-                    height: 550px;
-                    width: 480px;
-                    margin-left: 200px;
+.text {
 
-                    h2{
-                                       
-                                        font-family: "Poppins",sans-serif;
-                                        font-size: 45px;
-                                        font-weight: 600; 
-                                        line-height: 45px;
-                                        border: 2px solid red;
-                                        color: white;
-                    }
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 550px;
+    margin-left: 87px;
 
-                    p{
-                                        font-family: "Nunito",sans-serif;
-                                        font-size: 15px;
-                                        font-weight: 400; 
-                                        border: 2px solid red;
-                                        margin-top: -10px;
-                                        color: white;
-                    }
+    h1 {
+        margin-top: 50px;
+        font-family: "Poppins", sans-serif;
+        font-size: 44px;
+        font-weight: 600;
+        box-sizing: border-box;
+        line-height: 50px;
+        color: white;
+    }
 
-                    button{
-                                        font-family: "Nunito",sans-serif;
-                                        font-size: 18px;
-                                        font-weight: 600; 
-                                        width: 180px;
-                                        height: 60px;
-                                        border-radius:50px ;
-                                        color: #F2435E;
-                                       
-                                        border: 1px solid rgb(23, 22, 22);
-                    }
+    p {
+        font-family: "Nunito", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: -8px;
+        color: white;
+    }
 
-                    img{
-                                        color: #F2435E;
-                                        width: 18px;
-                                        height: 18px;
-                                        border: 2px solid red;
-                                       
-                    }
+    button {
 
-                  
+        width: 180px;
+        height: 60px;
+        font-family: "Nunito", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;
+        background-color: white;
+        padding-bottom: 8px;
+        padding-right: 16px;
+        margin-top: 7px;
+        border: 1px solid white;
+        color: #F2435E;
+
+
+        img {
+
+            position: relative;
+            top: 6px;
+            margin-left: 4px;
+
+
+        }
+
+    }
+
+
 }
 
-.logo{
-                    display: flex;
-                    border: 2px solid red;
-                    margin-top: 70px;
-                    img{
-                                        width: 150px;
-                                        height: 70px;
-                                        border: 2px solid red;
-                    }
-                    h1{
-                                        font-family: "Raleway",sans-serif;
-                                        font-size: 20px;
-                                        font-weight: 400;
-                                        margin-left: 10px;
-                                        margin-top: 25px;
-                                        color: white;
-                    }
+.logo {
+
+    display: flex;
+    margin-top: 40px;
+
+    img {
+        width: 160px;
+        height: 77px;
+
+    }
+
+    h2 {
+
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 11px;
+        margin-left: 10px;
+        color: white;
+    }
+
+
 }
 
-.image{
-                    border: 2px solid red;
-                    margin-left: 180px;
-                    img{
-                                        width: 840px;
-                                        height: 550px;
-                    }
+.img {
+
+
+    img {
+        width: 680px;
+        height: 550px;
+
+    }
 }
-
-
-

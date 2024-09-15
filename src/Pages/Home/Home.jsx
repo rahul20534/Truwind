@@ -26,6 +26,7 @@ const Home = () => {
       <Event></Event>
       <CommunityCard></CommunityCard>
       <Testinomal></Testinomal>
+      
      
     </div>
   )

@@ -5,9 +5,10 @@ import Home from "./Pages/Home/Home"
 
 //components
 import Navbar from "./components/Navbar/Navbar"
+import Form from './components/Form/Form';
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Form></Form>
     </BrowserRouter>
   )
 }
