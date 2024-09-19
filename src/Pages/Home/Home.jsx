@@ -21,11 +21,11 @@ const Home = () => {
       <Hero />
       <PhotoGrid />
       <About />
-      <Value></Value>
-      <Leader></Leader>
-      <Event></Event>
-      <CommunityCard></CommunityCard>
-      <Testinomal></Testinomal>
+      <Value/>
+      <Leader/>
+      <Event/>
+      <CommunityCard/>
+      <Testinomal/>
       
      
     </div>
