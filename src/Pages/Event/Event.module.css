@@ -1,0 +1,21 @@
+
+
+.banner{
+    text-align: center;
+    height: 328px;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 328px;
+    }
+
+    h2{
+        font-family: "Poppins",sans-serif;
+        font-size: 72px;
+        font-weight: 600;
+        position: relative;
+        bottom: 290px;
+        color: white;
+    }
+}
