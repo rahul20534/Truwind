@@ -4,6 +4,7 @@ import EventMain from '../../components/Event_componant/EventMain'
 import banner from '../../Image/banner.png';
 import img1 from '../../Image/img5.jpg';
 import img2 from '../../Image/img6.jpg';
+import Footer from '../../components/Footer/Footer';
 
 
 const Event = () => {
@@ -16,14 +17,18 @@ const Event = () => {
           <h2>Our Community, Your Network!</h2>
         </div>
 
-        <div className={Styled.seduleEvent}>
+        <div className={Styled.seduleEvent} style={{'border':'2px solid red'}}>
           <h1>Upcoming Events</h1>
           {images.map((img, index) => (
             <EventMain key={index} image={img} />
           ))}
 
         </div>
+        <Footer className={Styled.footer}></Footer>
+        
       </div>
+      
+      
     </>
   )
 }

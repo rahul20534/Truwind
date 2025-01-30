@@ -12,7 +12,9 @@ import Value from '../../components/ValueSection/Value';
 import Leader from '../../components/Leader/Leader'
 import Event from '../../components/Event/Event';
 import CommunityCard from '../../components/CommunityCard/CommunityCard';
-import Testinomal from '../../components/Testinomal/Testinomal'
+import Testinomal from '../../components/Testinomal/Testinomal';
+import Footer from '../../components/Footer/Footer';
+
 
 
 const Home = () => {
@@ -26,6 +28,7 @@ const Home = () => {
       <Event/>
       <CommunityCard/>
       <Testinomal/>
+      <Footer/>
       
      
     </div>
