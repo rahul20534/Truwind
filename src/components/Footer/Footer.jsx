@@ -4,7 +4,7 @@ import styled from './Footer.module.css';
 //icon
 import Arrow from '../../Icon/rightarrow.svg';
 import Instagram from '../../Icon/instagram 2.svg';
-import Linkdin from '../../Icon/Linkedin.svg';
+import Linkdin from '../../Icon/LinkedIn.svg';
 import Email from '../../Icon/email.svg';
 import Truwind from '../../Icon/Truwind.svg';
 
