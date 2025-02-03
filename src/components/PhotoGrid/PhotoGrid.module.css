@@ -15,8 +15,8 @@
 
 .image {
   flex: 0 0 auto;
-  width: 310px;
-  height: auto;
+  width: 337px;
+  height: 227px;
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;

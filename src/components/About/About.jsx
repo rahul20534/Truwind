@@ -7,20 +7,16 @@ const About = () => {
       <h2>About Truward</h2>
       <div className={styles.content}>
         <div className={styles.header}>
-          <h1>Where else to start but at the beginning</h1>
+          <h1>Guiding Business Truward</h1>
         </div>
 
         <div className={styles.desc}>
-          <p>That will help you to unleash your superpowers Truward is a
-            community-driven conscious business education company dedicated
-            to catalysing profound change in the business landscape.
+          <p>At Truward, we’re reshaping business as a tool for global good. 
+            Through education, events, and a growing impact network, we equip 
+            entrepreneurs and leaders with the mindset and resources they need
+             to drive meaningful, conscious change—transforming individuals and 
+             organisations into forces for societal growth.
           </p>
-
-          <p>
-            A community of more than 1000+ people all around the world. This
-            is a sample text for the about section for Truward
-          </p>
-
         </div>
 
       </div>

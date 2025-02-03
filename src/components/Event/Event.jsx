@@ -9,10 +9,8 @@ const Event = () => {
     <>
       <div className={Styles.event}>
         <h2>Events</h2>
-        <h1>Featured Event</h1>
-        <p>That will help you to unleash your superpowers Truward is a
-          community-driven conscious business education company dedicated to
-          catalysing profound change in the business landscape.
+        <h1>Upcoming Events</h1>
+        <p>Join our exclusive, high-impact events designed to bring changemakers together. Hear from thought leaders, collaborate with conscious entrepreneurs, and learn how to integrate conscious practices into your work.
         </p>
 
         <div className={Styles.event_image}>

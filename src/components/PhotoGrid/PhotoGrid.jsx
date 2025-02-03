@@ -4,12 +4,12 @@ import React, { useEffect, useRef } from 'react'
 import styles from './PhotoGrid.module.css'
 
 //images
-import image1 from '../../Image/img.jpg';
-import image2 from '../../Image/img1.jpg';
-import image3 from '../../Image/img3.jpg';
-import image4 from '../../Image/img4.jpg';
-import image5 from '../../Image/img5.jpg';
-import image6 from '../../Image/img6.jpg';
+import image1 from '../../Image/1img.png';
+import image2 from '../../Image/2img.png';
+import image3 from '../../Image/3img.png';
+import image4 from '../../Image/4img.png';
+import image5 from '../../Image/5img.png';
+
 
 function PhotoGrid() {
   const gridRef = useRef(null);
@@ -29,7 +29,7 @@ function PhotoGrid() {
       <img className={styles.image} src={image3} alt="Image 3" />
       <img className={styles.image} src={image4} alt="Image 4" />
       <img className={styles.image} src={image5} alt="Image 5" />
-      <img className={styles.image} src={image6} alt="Image 6" />
+      
     </div>
   )
 }

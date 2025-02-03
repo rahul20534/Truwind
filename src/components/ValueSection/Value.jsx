@@ -12,12 +12,12 @@ const Value = () => {
   return (
 
     <div className={styles.valueContainer}>
-      <h2>Our Values</h2>
+      <h2>Our Approach</h2>
 
       <div className={styles.mainContainer}>
         <div className={styles.heading}>
-          <h1>We promise the best</h1>
-          <h1>values in a community</h1>
+          <h1>We promise the best values in a community</h1>
+          
         </div>
 
         <div className={styles.ValueSection}>

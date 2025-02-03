@@ -12,19 +12,18 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.header}>
-        <h1>Learn The Way Of</h1>
-        <h1>Conscience <span className={styles.gradientText}>Education.</span></h1>
+        <h1> Redefining leadership</h1>
+        <h1>for a <span className={styles.gradientText}>better world.</span></h1>
       </div>
 
       <div className={styles.description}>
         <p>
-          This is a sample text that describes about this website. Lorem Ipsum is the 
-          way of giving sample texts. Lorem Ipsum is the text.
+        Change the way you do business and transform your impact on society to create a world we all need and want
         </p>
       </div>
 
       <div className={styles.btn}>
-        KNOW MORE 
+      Join Our Movement
         <img src={ARROW} alt="arrow" />
       </div>
     </div>
