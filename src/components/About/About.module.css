@@ -29,7 +29,8 @@
 
 .header{
     display: flex;
-    width: 50%;
+    width: 690px;
+    height: auto;
 
     h1{
         font-family: "Poppins",sans-serif;
