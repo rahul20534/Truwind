@@ -10,80 +10,65 @@ import Purpose from '../../Icon/Purpose.png';
 
 const Value = () => {
   return (
-
-    <div className={styles.valueContainer}>
-      <h2>Our Approach</h2>
-
-      <div className={styles.mainContainer}>
-        <div className={styles.heading}>
-          <h1>We promise the best values in a community</h1>
-          
-        </div>
-
-        <div className={styles.ValueSection}>
-
-          <div className={styles.part}>
-            <div className={styles.value}>
-              <div className={styles.logoContainer}>
-                <img src={EXPERT} alt="Logo" />
-              </div>
-              <div className={styles.valueDesc}>
-                <h1>Expertise</h1>
-                <p>
-                  Truward is a community-driven conscious business education company
-                  dedicated to catalysing profound change in the business landscape.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.value}>
-              <div className={styles.logoContainer}>
-                <img src={Process} alt="Logo" />
-              </div>
-              <div className={styles.valueDesc}>
-                <h1>Process</h1>
-                <p>
-                  Truward is a community-driven conscious business education company
-                  dedicated to catalysing profound change in the business landscape.
-                </p>
-              </div>
-            </div>
+    <>
+      <div className={styles.approach}>
+        <div className={styles.maincontainer}>
+          <div className={styles.left}>
+            <p>Our Approach</p>
+            <h1>We promise the best values in a community</h1>
 
           </div>
 
-          <div className={styles.part}>
+          <div className={styles.right}>
+            <div className={styles.personal}>
+              <div className={styles.icon1}>
+                <img src={EXPERT} alt="" />
 
-            <div className={styles.value}>
-              <div className={styles.logoContainer}>
-                <img src={Purpose} alt="Logo" />
               </div>
-              <div className={styles.valueDesc}>
-                <h1>Purpose</h1>
-                <p>
-                  Truward is a community-driven conscious business education company
-                  dedicated to catalysing profound change in the business landscape.
-                </p>
+              <div className={styles.text1}>
+                <h1>Personal and Organizational Consciousness</h1>
+                <p>We believe true change starts with individual self-awareness and extends to the entire organization. Our programs focus on cultivating emotional intelligence, leadership development, and the ethical alignment of business practices.</p>
+
               </div>
+
             </div>
 
-            <div className={styles.value}>
-              <div className={styles.logoContainer}>
-                <img src={Motto} alt="Logo" />
+            <div className={styles.impact}>
+              <div className={styles.icon2}>
+                <img src={Purpose} alt="" />
+
               </div>
-              <div className={styles.valueDesc}>
-                <h1>Motto</h1>
-                <p>
-                  Truward is a community-driven conscious business education company
-                  dedicated to catalysing profound change in the business landscape.
-                </p>
+
+              <div className={styles.text2}>
+                <h1>
+                  Impact-Oriented Collaboration
+                </h1>
+                <p>We emphasize collaboration over competition, bringing together change makers from various fields to learn, share, and work together in ways that amplify their individual and collective impact.</p>
+
               </div>
+
+
+            </div>
+
+            <div className={styles.Sustainable}>
+              <div className={styles.icon3}>
+                <img src={Purpose} alt="" />
+
+              </div>
+              <div className={styles.text3}>
+                <h1>Sustainable and Scalable Solutions</h1>
+                <p>We teach businesses how to leverage cutting-edge tools and methods to measure and manage their environmental and social impact, ensuring that growth remains sustainable and conscious.</p>
+
+              </div>
+
             </div>
 
           </div>
         </div>
+
       </div>
-    </div>
 
+    </>
   )
 }
 
