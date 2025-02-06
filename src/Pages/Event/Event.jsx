@@ -9,6 +9,24 @@ import Footer from '../../components/Footer/Footer';
 
 const Event = () => {
   const images = [img2, img1, img2];
+  const dates = [
+    {
+      id: '1',
+      Month: 'OCT',
+      Date: '19'
+    },
+    {
+      id: '2',
+      Month: 'OCT',
+      Date: '29'
+    },
+    {
+      id: '3',
+      Month: 'NOV',
+      Date: '12'
+    }
+
+  ]
   return (
     <>
       <div className={Styled.event}>
@@ -17,18 +35,21 @@ const Event = () => {
           <h2>Our Community, Your Network!</h2>
         </div>
 
-        <div className={Styled.seduleEvent} style={{'border':'2px solid red'}}>
-          <h1>Upcoming Events</h1>
+        <div className={Styled.seduleEvent} >
+          <h1 className={Styled.mainheading}>Upcoming Events</h1>
+          <hr />
+
           {images.map((img, index) => (
-            <EventMain key={index} image={img} />
+            dates[index] && <EventMain key={index} image={img} dates={dates[index]} />
           ))}
+
 
         </div>
         <Footer className={Styled.footer}></Footer>
-        
+
       </div>
-      
-      
+
+
     </>
   )
 }

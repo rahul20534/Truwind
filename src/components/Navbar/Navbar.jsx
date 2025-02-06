@@ -18,6 +18,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link to='/Community'
+          
             style={{ textDecoration: 'none', color: '#525252' }}>Community</Link>
         </div>
         <div>

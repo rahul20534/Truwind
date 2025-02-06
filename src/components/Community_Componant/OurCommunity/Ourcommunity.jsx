@@ -6,14 +6,11 @@ const Ourcommunity =()=> {
     <>
     <div className={Styled.ourcommunity}>
         <h2>Our Community</h2>
-        <h1>How we are building a community</h1>
-        <p>That will help you to unleash your superpowers Truward is a 
-            community-driven conscious business education company dedicated to 
-            catalysing profound change in the business landscape.
+        <h1>The Power of Coming Together</h1>
+        <p>At Truward, we believe that real change happens when passionate, conscious minds unite. We’re not just a platform, we’re a global movement of innovators, entrepreneurs, and leaders committed to building a future that prioritizes people, planet and our collective purpose as humans. By bringing together forward-thinkers, we’re creating an ecosystem where collaboration sparks innovation, and every idea has the power to make waves.
         </p>
 
-        <p>A community of more than 1000+ people all around the world. 
-            This is a sample text for the about section for Truward
+        <p>Our community isn’t just about growth—it’s about impact.
         </p>
 
     </div>

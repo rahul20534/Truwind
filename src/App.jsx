@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 //Pages
 import Home from "./Pages/Home/Home"
-import Community from "./Pages/Community/Community";
+import Community from './Pages/Community/Community'
 import Event from './Pages/Event/Event'
 
 //components

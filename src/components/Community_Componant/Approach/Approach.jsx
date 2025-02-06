@@ -15,33 +15,27 @@ const Approach =()=> {
         <div className={styled.content}>
             <div className={styled.community}>
                 <img src={community}/>
-                <h3>Value of community</h3>
-                <p>At Truward, we recognise the pivotal role community plays
-                     in any educational and life transforming journey. A thriving
-                      community is built upon a foundation of trust, shared values, 
-                      and meaningful connections.
+                <h3>Collaboration Over Competition</h3>
+                
+                <p>We believe the greatest solutions emerge when we work together, not apart.
                 </p>
 
             </div>
 
             <div className={styled.experience}>
                 <img src={experience}/>
-                <h3>Range of experiences</h3>
-                <p>Through these experiences, we aim to foster deep connections,
-                     inspire collaborative ventures, and create a strong sense of 
-                     belonging. Members will find support, inspiration, and opportunities 
-                     for collaboration that can propel their individual journeys forward.
+                <h3>Humanity at the Core</h3>
+                
+                <p>Every action we take is rooted in conscious decision-making that uplifts and empowers.
                 </p>
 
             </div>
 
             <div className={styled.network}>
                 <img src={network}/>
-                <h3>Network building</h3>
-                <p>At Truward you will be able to access a network of like minded 
-                    individuals who are driven to create positive change. Together, 
-                    we will harness the collective wisdom and energy of our community 
-                    to drive meaningful change, both within ourselves and in the broader world.
+                <h3>Purposeful Growth</h3>
+                
+                <p>We're not chasing success—we’re creating meaningful impact that transforms lives and the world.
                 </p>
 
             </div>
