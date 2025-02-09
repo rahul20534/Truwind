@@ -10,16 +10,28 @@ import image3 from '../../Image/3img.png';
 import image4 from '../../Image/4img.png';
 import image5 from '../../Image/5img.png';
 
-
 function PhotoGrid() {
   const gridRef = useRef(null);
 
   useEffect(() => {
     const grid = gridRef.current;
-    if (grid) {
-      const scrollAmount = (grid.scrollWidth - grid.clientWidth) / 2;
+    if (!grid) return;
+
+    let scrollAmount = 0;
+    const scrollSpeed = 2; // Adjust speed of scrolling
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+
+    const scrollImages = () => {
+      scrollAmount += scrollSpeed;
+      if (scrollAmount >= maxScroll) {
+        scrollAmount = 0; // Reset scroll
+      }
       grid.scrollLeft = scrollAmount;
-    }
+    };
+
+    const interval = setInterval(scrollImages, 50); // Adjust interval for smoothness
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -29,9 +41,8 @@ function PhotoGrid() {
       <img className={styles.image} src={image3} alt="Image 3" />
       <img className={styles.image} src={image4} alt="Image 4" />
       <img className={styles.image} src={image5} alt="Image 5" />
-      
     </div>
-  )
+  );
 }
 
 export default PhotoGrid;

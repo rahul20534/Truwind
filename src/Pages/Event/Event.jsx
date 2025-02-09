@@ -2,7 +2,7 @@ import React from 'react'
 import Styled from './Event.module.css';
 import EventMain from '../../components/Event_componant/EventMain'
 import banner from '../../Image/banner.png';
-import img1 from '../../Image/img5.jpg';
+import img1 from '../../Image/1_1.png';
 import img2 from '../../Image/img6.jpg';
 import Footer from '../../components/Footer/Footer';
 

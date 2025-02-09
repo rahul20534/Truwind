@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <div className={styles.navbarOption}>
         <div>
-          <Link to='/About'
+          <Link to=''
             style={{ textDecoration: 'none', color: '#525252' }}>About</Link>
         </div>
         <div>
@@ -26,7 +26,7 @@ const Navbar = () => {
             style={{ textDecoration: 'none', color: '#525252' }}>Events</Link>
         </div>
         <div>
-          <Link to='/Contact'
+          <Link to=''
             style={{ textDecoration: 'none', color: '#525252' }}>Contact</Link>
         </div>
       </div>

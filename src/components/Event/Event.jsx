@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './Event.module.css';
-import Image from '../../Image/img6.jpg';
+import Image from '../../Image/1_1.png';
 import forward from '../../Icon/forward.svg';
 
 const Event = () => {

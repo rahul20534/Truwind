@@ -2,11 +2,12 @@ import React from 'react'
 import styled from './Footer.module.css';
 
 //icon
-import Arrow from '../../Icon/rightarrow.svg';
+
 import Instagram from '../../Icon/instagram 2.svg';
 import Linkdin from '../../Icon/LinkedIn.svg';
 import Email from '../../Icon/email.svg';
 import Truwind from '../../Icon/Truwind.svg';
+import whitearrow from '../../Icon/whitearrow.svg';
 
 
 
@@ -60,7 +61,7 @@ const Footer = () => {
 
                         </form>
                         <div className={styled.btn}>
-                                <button>Leave Us A Message<img src={Arrow} alt="" /></button>
+                                <button>Leave Us A Message<img src={whitearrow} alt="" /></button>
                         </div>
 
                     </div>

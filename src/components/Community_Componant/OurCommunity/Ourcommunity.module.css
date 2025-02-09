@@ -1,36 +1,80 @@
-.ourcommunity{
+.ourcommunity {
     height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    h2{
+.ourcommunity h2 {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color: #F2435E;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-top: 40px;
+}
+
+.ourcommunity h1 {
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    width: 600px;
+    margin-bottom: 70px;
+    line-height: 60px;
+   
+}
+
+/* Centering the text elements without fixed margin-left */
+.ourcommunity h1,
+.ourcommunity p {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto; /* Centering */
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    .ourcommunity h1, .ourcommunity p {
+        width: 550px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .ourcommunity h1 {
+        font-size: 45px;
+        line-height: 55px;
+        width: 520px;
+    }
+    .ourcommunity p {
+        font-size: 17px;
+        width: 520px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ourcommunity h1 {
+        font-size: 40px;
+        line-height: 50px;
+        width: 480px;
+    }
+    .ourcommunity p {
         font-size: 16px;
-        font-family: "Nunito",sans-serif;
-        font-weight: 600;
-        color: #F2435E;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        margin-top: 40px;
+        width: 480px;
     }
+}
 
-    h1{
-        font-size: 50px;
-        font-family: "Poppins",sans-serif;
-        font-weight: 600;
-        box-sizing: border-box;
-        width: 600px;
-        margin-left: 365px;
-        margin-bottom: 70px;
-        line-height: 60px;
+@media (max-width: 768px) {
+    .ourcommunity h1 {
+        font-size: 35px;
+        line-height: 45px;
+        width: 90%;
     }
-
-    p{
-        font-size: 18px;
-        font-family: "Nunito",sans-serif;
-        font-weight: 400;
-        width: 600px;
-        margin-left: 365px;
-        margin-top: -5px;
+    .ourcommunity p {
+        font-size: 15px;
+        width: 90%;
     }
 }

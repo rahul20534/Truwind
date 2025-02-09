@@ -8,15 +8,15 @@ import Footer from '../../components/Footer/Footer'
 
 
 
-const Community = ()=> {
+const Community = () => {
   return (
     <>
-    <CommunityHeading></CommunityHeading>
-    <OurCommunity></OurCommunity>
-    <Photogrid></Photogrid>
-    <Approach></Approach>
-   <Footer></Footer>
-    
+      <CommunityHeading></CommunityHeading>
+      <OurCommunity></OurCommunity>
+      <Photogrid></Photogrid>
+      <Approach></Approach>
+      <Footer></Footer>
+
     </>
   )
 }

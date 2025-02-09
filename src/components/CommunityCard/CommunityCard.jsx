@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './CommunityCard.module.css';
-import image from '../../Image/img7.jpg';
+import image from '../../Image/1_2.png';
 import arrow from '../../Icon/Vector.svg';
 import Logo from '../../Icon/Truwind.svg';
 

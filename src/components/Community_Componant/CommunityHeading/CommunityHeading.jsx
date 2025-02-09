@@ -1,8 +1,8 @@
 import React from 'react'
 import Styled from './CommunityHeading.module.css';
 
-import img1 from '../../../Image/img12.png'
-import img2 from '../../../Image/img14.png'
+import img1 from '../../../Image/1_3.png'
+import img2 from '../../../Image/1_4.png'
 
 const CommunityHeading = () => {
     return (
