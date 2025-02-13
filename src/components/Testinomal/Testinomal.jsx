@@ -45,7 +45,7 @@ const Testinomal = () => {
 
                 <div className={Style.author}>
                     <div className={Style.image}>
-                        <img src={girl} alt="" />
+                        
                         <div className={Style.name}>
                             <h1>{currentTestimonial.Author}</h1>
                             <p>{currentTestimonial.Member}</p>

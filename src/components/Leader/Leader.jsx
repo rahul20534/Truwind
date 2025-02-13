@@ -14,10 +14,10 @@ const Leader = () => {
                 <div className={Styles.headline}>
                     <h1>Join The Movement to Shape Business For Greater Humanity</h1>
                 </div>
-                
+
                 <div className={Styles.image}>
                     <img className={Styles.img1} src={image} alt="image" />
-                    <img className={Styles.img2} src={Play} alt="Logo" />
+
 
 
                 </div>

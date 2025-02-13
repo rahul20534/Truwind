@@ -154,7 +154,7 @@
 
 .btn {
     display: flex;
-    justify-content: flex-start; /* Aligns the button to the left */
+    justify-content: center; /* Aligns the button to the left */
     width: 100%; /* Ensures it spans the form width */
     margin-top: 25px;
  

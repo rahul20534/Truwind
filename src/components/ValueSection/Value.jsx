@@ -35,7 +35,7 @@ const Value = () => {
 
             <div className={styles.impact}>
               <div className={styles.icon2}>
-                <img src={Purpose} alt="" />
+                <img src={Process} alt="" />
 
               </div>
 

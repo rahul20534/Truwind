@@ -16,50 +16,10 @@ const Footer = () => {
         <>
             <div className={styled.footer}>
                 <div className={styled.mainfooter}>
-                    <div className={styled.heading}>
-                        <h1>Get in touch with us!</h1>
-                        <p>We’re excited to connect with you! Whether you have a question, want to partner with us,
-                            or are interested in coaching opportunities, your journey begins here.</p>
-
-                    </div>
+                    
 
                     <div className={styled.form}>
-                        <form action="">
-                            <div className={styled.row1}>
-                                <div className={styled.name}>
-                                    <input type="text" placeholder='Your Name'/>
-                                    <hr />
-                                </div>
-
-                                <div className={styled.email}>
-                                    <input type="email" placeholder='Email Address' />
-                                    <hr />
-                                </div>
-                            </div>
-
-                            <div className={styled.row2}>
-                                <div className={styled.mobilenumber}>
-                                    <input type="number" placeholder='Phone Number (optional)' />
-                                    <hr />
-                                </div>
-
-                                <div className={styled.city}>
-                                    <input type="text" placeholder='City' />
-                                    <hr />
-                                </div>
-                            </div>
-
-                            <div className={styled.row3}>
-                                <div className={styled.message}>
-                                    <input type="text" placeholder='Message' />
-                                    <hr />
-                                </div>
-
-
-                            </div>
-                            
-
-                        </form>
+                        
                         <div className={styled.btn}>
                                 <button>Leave Us A Message<img src={whitearrow} alt="" /></button>
                         </div>
