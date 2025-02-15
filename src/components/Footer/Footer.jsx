@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from './Footer.module.css';
+import { useNavigate } from "react-router-dom";
+
 
 //icon
 
@@ -10,8 +12,9 @@ import Truwind from '../../Icon/Truwind.svg';
 import whitearrow from '../../Icon/whitearrow.svg';
 
 
+const Footer = ({ showHeading = true, customText,CustomClick}) => {
+    const navigate = useNavigate();
 
-const Footer = () => {
     return (
         <>
             <div className={styled.footer}>
@@ -21,14 +24,14 @@ const Footer = () => {
                     <div className={styled.form}>
                         
                         <div className={styled.btn}>
-                                <button>Leave Us A Message<img src={whitearrow} alt="" /></button>
+                                <button onClick={()=> navigate(CustomClick || "/Contact")}>{customText||"Leave Us A Message"}<img src={whitearrow} alt="" /></button>
                         </div>
 
                     </div>
 
                     <div className={styled.icon}>
                         <div className={styled.text}>
-                            <h1>Stay updated on our events, initiatives, and community highlights!</h1>
+                            {showHeading && <h1>Stay updated on our events, initiatives, and community highlights!</h1>}
                             <p>Follow us on</p>
 
                         </div>

@@ -26,7 +26,7 @@ const Navbar = () => {
             style={{ textDecoration: 'none', color: '#525252' }}>Events</Link>
         </div>
         <div>
-          <Link to=''
+          <Link to='/Contact'
             style={{ textDecoration: 'none', color: '#525252' }}>Contact</Link>
         </div>
       </div>
