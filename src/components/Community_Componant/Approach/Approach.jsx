@@ -6,7 +6,6 @@ import network from '../../../Icon/netwrok.svg'
 
 const Approach =()=> {
   return (
-    <>
     <div className={styled.Approach}>
         <h2>Our Approach</h2>
 
@@ -44,8 +43,6 @@ const Approach =()=> {
         </div>
 
     </div>
-    
-    </>
 
   )
 }

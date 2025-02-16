@@ -1,6 +1,6 @@
-import React from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom';
-
+import { FiMenu, FiX } from 'react-icons/fi';
 
 //styles
 import styles from './Navbar.module.css'
@@ -9,9 +9,21 @@ import styles from './Navbar.module.css'
 import Logo from '../../Image/Newlogo.jpg';
 
 const Navbar = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  
   return (
     <div className={styles.navbar}>
-      <div className={styles.navbarOption}>
+
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        {menuOpen ? <FiX size={30} /> : <FiMenu size={30} />}
+      </div>
+
+      <div className={`${styles.navbarOption} ${menuOpen ? styles.open : ''}`}>
         <div>
           <Link to=''
             style={{ textDecoration: 'none', color: '#525252' }}>About</Link>

@@ -14,6 +14,7 @@ function PhotoGrid() {
   const gridRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return;
     const grid = gridRef.current;
     if (!grid) return;
 
@@ -41,6 +42,7 @@ function PhotoGrid() {
       <img className={styles.image} src={image3} alt="Image 3" />
       <img className={styles.image} src={image4} alt="Image 4" />
       <img className={styles.image} src={image5} alt="Image 5" />
+      <img className={styles.image} src={image5} alt="Image 6" />
     </div>
   );
 }

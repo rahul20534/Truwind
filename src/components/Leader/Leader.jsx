@@ -17,9 +17,6 @@ const Leader = () => {
 
                 <div className={Styles.image}>
                     <img className={Styles.img1} src={image} alt="image" />
-
-
-
                 </div>
 
                 <div className={Styles.founder}>

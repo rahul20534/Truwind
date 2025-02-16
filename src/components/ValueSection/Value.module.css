@@ -1,7 +1,7 @@
 .approach {
   width: 100%;
   height: auto;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,14 +9,14 @@
 
 .maincontainer {
   width: 85%;
-  
+
   height: auto;
   display: flex;
   justify-content: space-between;
 }
 
 .left {
-  
+
   width: 600px;
   height: auto;
 
@@ -48,21 +48,24 @@
 .right {
   display: flex;
   flex-direction: column;
-  width: 635px;
   height: auto;
   margin-top: 70px;
 }
 
-.personal,.impact,.Sustainable {
+.personal,
+.impact,
+.Sustainable {
   display: flex;
-  width: 635px;
   height: auto;
-  
+  width: 100%;
+  gap: 20px;
   justify-content: space-between;
 }
 
-.icon1,.icon2,.icon3 {
-  
+.icon1,
+.icon2,
+.icon3 {
+
   width: 60px;
   height: 60px;
 
@@ -72,8 +75,10 @@
   }
 }
 
-.text1,.text2,.text3 {
-  
+.text1,
+.text2,
+.text3 {
+
   display: flex;
   flex-direction: column;
   width: 550px;
@@ -90,15 +95,74 @@
 
   }
 
-  p{
+  p {
     font-family: Nunito;
-font-size: 20px;
-font-weight: 400;
-line-height: 26px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 
   }
+}
 
+
+@media screen and (max-width: 768px) {
+  .maincontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .left {
+    width: 100%;
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .personal,
+  .impact,
+  .Sustainable {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .text1,
+  .text2,
+  .text3 {
+    width: 100%;
+    h1 {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
 }

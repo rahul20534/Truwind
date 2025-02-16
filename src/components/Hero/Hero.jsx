@@ -12,8 +12,7 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.header}>
-        <h1> Redefining leadership</h1>
-        <h1>for a <span className={styles.gradientText}>better world.</span></h1>
+        <h1> Redefining leadership for a <span className={styles.gradientText}>better world.</span></h1>
       </div>
 
       <div className={styles.description}>

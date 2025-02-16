@@ -11,7 +11,7 @@ const About = () => {
         </div>
 
         <div className={styles.desc}>
-          <p>At Truward, we’re reshaping business as a tool for global good. 
+          <p>At Truward, we're reshaping business as a tool for global good. 
             Through education, events, and a growing impact network, we equip 
             entrepreneurs and leaders with the mindset and resources they need
              to drive meaningful, conscious change—transforming individuals and 
@@ -20,13 +20,10 @@ const About = () => {
         </div>
 
       </div>
-
     </div>
-
   )
 
 }
-
 
 export default About;
 

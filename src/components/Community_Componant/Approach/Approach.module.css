@@ -1,10 +1,11 @@
 .Approach {
-    text-align: left;
+    text-align: center; /* Center align content */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .Approach h2 {
@@ -15,19 +16,17 @@
     text-decoration: underline;
     text-underline-offset: 10px;
     margin-top: 30px;
-    margin-left: 120px;
-    align-self: flex-start;
+    align-self: center; /* Center on larger screens */
 }
 
 .Approach h1 {
     font-family: "Poppins", sans-serif;
     font-size: 52px;
     font-weight: 600;
-    width: 670px;
+    max-width: 670px;
     line-height: 60px;
     color: #2A2A2A;
-    margin-left: 120px;
-    align-self: flex-start;
+    text-align: center;
 }
 
 /* Content Layout */
@@ -36,7 +35,7 @@
     width: 90%;
     max-width: 1200px;
     height: auto;
-    margin-left: 65px;
+    justify-content: space-between; /* Distribute items evenly */
     gap: 40px;
 }
 
@@ -44,91 +43,59 @@
 .community, .network, .experience {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center; /* Center align items */
+    text-align: center;
 }
 
 .community img, .network img, .experience img {
     width: 45px;
     height: 45px;
     margin-top: 50px;
-    margin-left: 80px;
 }
 
 .community h3, .network h3, .experience h3 {
     font-family: "Nunito", sans-serif;
     font-size: 22px;
     font-weight: 700;
-    margin-left: 80px;
 }
 
 .community p, .network p, .experience p {
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    margin-left: 80px;
-    width: 300px;
+    max-width: 300px;
 }
 
-/* ✅ Responsive Design for Laptops */
-@media (max-width: 1440px) {
-    .Approach h1 {
-        width: 620px;
-    }
-    .content {
-        width: 95%;
-        margin-left: 50px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .Approach h1 {
-        font-size: 48px;
-        width: 580px;
-        margin-left: 100px;
-    }
-    .content {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 40px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .Approach h1 {
-        font-size: 42px;
-        width: 500px;
-        margin-left: 80px;
-    }
-    .content {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-    .community img, .network img, .experience img,
-    .community h3, .network h3, .experience h3,
-    .community p, .network p, .experience p {
-        margin-left: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .Approach h2, .Approach h1 {
-        margin-left: 20px;
-        width: 90%;
-        text-align: center;
+/* ============ Responsive Design for Mobile ============ */
+@media screen and (max-width: 768px) {
+    .Approach h2 {
         align-self: center;
-    }
-    .content {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-left: 0;
-    }
-    .community img, .network img, .experience img,
-    .community h3, .network h3, .experience h3,
-    .community p, .network p, .experience p {
-        margin-left: 0;
         text-align: center;
+    }
+
+    .Approach h1 {
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .content {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .community img, .network img, .experience img {
+        margin-top: 20px;
+    }
+
+    .community h3, .network h3, .experience h3 {
+        margin: 10px 0;
+    }
+
+    .community p, .network p, .experience p {
+        margin: 0;
         width: 90%;
     }
 }

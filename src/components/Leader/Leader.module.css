@@ -28,7 +28,6 @@
 }
 
 .headline{
-    
     width: 880px;
     height: auto;
     margin-top: 20px;
@@ -38,8 +37,6 @@
         font-size: 52px;
         font-family: "Poppins", sans-serif;
         font-weight: 600;
-        line-height: 60px;
-        
     }
 }
 
@@ -68,23 +65,6 @@
         outline: none;
 
     }
-
-    .img2 {
-        width: 22px;
-        height: 26.93px;
-        position: relative;
-        bottom: 175px;
-        left: 10px;
-        background-color: rgb(236, 230, 230);
-        border: 2px solid white;
-        border-radius: 50%;
-        padding-left: 12px;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-right: 10px;
-        opacity: 0.5;
-
-    }
 }
 
 .founder {
@@ -110,4 +90,62 @@
         }
     }
 
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .leader {
+        height: 100%;
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+
+    .headline {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+
+        h1 {
+            font-size: 26px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+        }
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .img1 {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            z-index: -1;
+            border: 1px solid white;
+            outline: none;
+        }
+    }
+
+    .founder {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+
+        h1 {
+            font-family: "Nunito", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #F2435E;
+
+            span {
+                font-family: "Nunito", "italic", sans-serif, ;
+                font-weight: 500;
+                font-size: 16px;
+                color: #F2435E;
+            }
+        }
+    }
 }

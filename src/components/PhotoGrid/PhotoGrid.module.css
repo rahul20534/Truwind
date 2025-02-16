@@ -35,3 +35,28 @@
 .photoGrid::-webkit-scrollbar {
   display: none; 
 }
+
+
+/* ============ MEDIA QUERY FOR MOBILE ============ */
+@media (max-width: 768px) {
+  .photoGrid {
+    display: grid;                       /* Switch from flex to grid on mobile */
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns => first row: 3 images */
+    gap: 10px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0px 10px;
+  }
+
+  .image {
+    width: 100%;
+    height: 80px;
+    transform: none;  /* Remove the up/down translation */
+  }
+
+  /* Also remove any nth-child transforms if you had them */
+  .image:nth-child(even),
+  .image:nth-child(odd) {
+    transform: none;
+  }
+}
