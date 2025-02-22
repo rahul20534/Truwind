@@ -138,3 +138,54 @@
         height: 15px;
     }
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .testinomal {
+        h2 {
+            font-size: 14px;
+        }
+    }
+
+    .para {
+        width: 100%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .message {
+        width: 100%;
+        margin-left: 0px;
+
+        h1 {
+            font-size: 32px;
+            padding-right: 0px;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin-top: 20px;
+        }
+    }
+
+    .author {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image {
+        margin-bottom: 10px;
+    }
+
+    .name {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .arrow {
+        margin-top: 20px;
+    }
+}
