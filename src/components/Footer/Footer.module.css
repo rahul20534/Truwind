@@ -282,6 +282,102 @@
 
 
 
+/* mobile view */
 
+@media screen and (max-width: 768px) {
+    .mainfooter{
+        width: 95%;
+        height: auto;
+        margin-top: 20px;
+    }
 
+    .heading{
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0px;
 
+        h1{
+            font-size: 32px;
+        }
+        p{
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+
+    .form{
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+
+        form{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+
+            .row1,.row2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .name,.email,.mobilenumber,.city{
+        input {
+            width: 100%;
+        }
+        hr{
+            width: 100%;
+        }
+    }
+
+    .row3{
+        .message{
+            input {
+                width: 100%;
+            }
+            hr{
+                width: 100%;
+            }
+        }
+    }
+
+    .btn {
+        button {
+            width: 100%;
+        }
+    }
+
+    .icon{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .text{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .socialmedia{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .footernav{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .watermark{
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
