@@ -104,11 +104,10 @@
   .btnContainer{
     width: 100%;
     flex: 1;
-    margin-left: 20px;
   }
 
   .subBtn{
-    width: 80px;
+    width: 60px;
     padding: 6px 14px;
     font-size: 12px;
   }
