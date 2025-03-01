@@ -16,6 +16,8 @@
 
 }
 
+
+
 .date {
   display: flex;
   flex-direction: column;
@@ -81,6 +83,7 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
 
 .eventText hr {
   width: 100%;

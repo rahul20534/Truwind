@@ -33,12 +33,13 @@
     height: auto;
 
     h1{
-        font-family: "Poppins",sans-serif;
+        font-family: "Raleway",sans-serif;
         font-size: 52px;
-        font-weight: 600;
+        font-weight: 700;
         text-align: center;
         margin: 0;
         line-height: 1.2;
+       
     }
 }
 

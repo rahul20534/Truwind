@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     height: auto;
     min-height: 96px;
     text-align: center;
@@ -29,13 +29,16 @@
 
 .text1 h1, .text2 h1 {
     font-family: Raleway, sans-serif;
-    font-size: 50px;
+    font-size: 72px;
     font-weight: 600;
     line-height: 30px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: white;
     margin-right: 10px;
+    text-align: center;
+
+
 }
 
 .text1 img, .text2 img {

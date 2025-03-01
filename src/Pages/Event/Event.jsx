@@ -39,9 +39,9 @@ const Event = () => {
           <h1 className={Styled.mainheading}>Upcoming Events</h1>
           <hr />
 
-          {images.map((img, index) => (
-            dates[index] && <EventMain key={index} image={img} dates={dates[index]} />
-          ))}
+          <div className={Styled.text}>
+            <h1>Coming Soon</h1>
+          </div>
 
 
         </div>

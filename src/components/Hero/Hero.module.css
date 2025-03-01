@@ -15,12 +15,14 @@
   justify-content: center;
 
   h1{
-    font-size: 72px;
+    font-size: 88px;
     font-weight: 700;
     color: #333;
     text-align: center;
     margin: 0;
-    width: 60%;
+    width: 945px;
+    font-family: Raleway;
+    font-weight: 700;
   }
 }
 

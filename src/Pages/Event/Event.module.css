@@ -52,6 +52,21 @@
 
 
 }
+.text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: Nunito;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #F2435E;
+  
+  }
 
 .mainheading {
     font-family: Poppins;
