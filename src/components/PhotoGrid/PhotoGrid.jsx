@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
+import styles from './PhotoGrid.module.css';
 
-//styles
-import styles from './PhotoGrid.module.css'
-
-//images
+// Images
 import image1 from '../../Image/1img.png';
 import image2 from '../../Image/2img.png';
 import image3 from '../../Image/3img.png';
 import image4 from '../../Image/4img.png';
 import image5 from '../../Image/5img.png';
+
+const images = [image1, image2, image3, image4, image5];
 
 function PhotoGrid() {
   const gridRef = useRef(null);
@@ -20,14 +20,16 @@ function PhotoGrid() {
 
     let scrollAmount = 0;
     const scrollSpeed = 2; // Adjust speed of scrolling
-    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    const maxScroll = grid.scrollWidth / 2; // Halfway point (before the duplicate set)
 
     const scrollImages = () => {
       scrollAmount += scrollSpeed;
       if (scrollAmount >= maxScroll) {
-        scrollAmount = 0; // Reset scroll
+        scrollAmount = 0; // Reset smoothly
+        grid.scrollLeft = 0;
+      } else {
+        grid.scrollLeft = scrollAmount;
       }
-      grid.scrollLeft = scrollAmount;
     };
 
     const interval = setInterval(scrollImages, 50); // Adjust interval for smoothness
@@ -37,12 +39,14 @@ function PhotoGrid() {
 
   return (
     <div className={styles.photoGrid} ref={gridRef}>
-      <img className={styles.image} src={image1} alt="Image 1" />
-      <img className={styles.image} src={image2} alt="Image 2" />
-      <img className={styles.image} src={image3} alt="Image 3" />
-      <img className={styles.image} src={image4} alt="Image 4" />
-      <img className={styles.image} src={image5} alt="Image 5" />
-      <img className={styles.image} src={image5} alt="Image 6" />
+      {/* Original Images */}
+      {images.map((img, index) => (
+        <img key={index} className={styles.image} src={img} alt={`Image ${index + 1}`} />
+      ))}
+      {/* Duplicate Images for Seamless Loop */}
+      {images.map((img, index) => (
+        <img key={`dup-${index}`} className={styles.image} src={img} alt={`Duplicate ${index + 1}`} />
+      ))}
     </div>
   );
 }
