@@ -7,75 +7,182 @@
     align-items: center;
 }
 
+/* Banner Section */
 .banner {
     text-align: center;
-    height: 328px;
     position: relative;
-    
-
-    img {
-        width: 100%;
-        height: 328px;
-    }
-
-    h2 {
-        font-family: "Poppins", sans-serif;
-        font-size: 72px;
-        font-weight: 600;
-        position: relative;
-        bottom: 290px;
-        color: white;
-    }
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
-.seduleEvent {
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-height: 328px;
+}
+
+.banner h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Schedule Event Section */
+.scheduleEvent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    
+    max-width: 1200px;
+    padding: 40px 0;
     height: auto;
-
-    hr {
-        width: 100%;
-        /* Length of the line */
-        height: 3px;
-        /* Thickness of the line */
-        background-color: #C7C7C7;
-        /* Line color */
-        border: none;
-        /* Remove default border */
-        margin: 10px 0;
-        /* Optional spacing */
-    }
-
-
-
 }
-.text{
+
+.scheduleEvent hr {
+    width: 100%;
+    height: 3px;
+    background-color: #C7C7C7;
+    border: none;
+    margin: 20px 0 40px 0;
+}
+
+.text {
     width: 100%;
     height: auto;
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    font-family: Nunito;
-  font-weight: 600;
-  font-size: 52px;
-  line-height: 30px;
-  letter-spacing: 0%;
-  color: #F2435E;
-  
-  }
+    padding: 20px 0;
+}
+
+.text h1 {
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 1.2;
+    color: #F2435E;
+    text-align: center;
+    margin: 0;
+}
 
 .mainheading {
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 52px;
     font-weight: 600;
-    line-height: 60px;
+    line-height: 1.2;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    
+    margin: 0 auto;
     width: fit-content;
+}
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+    .banner h2 {
+        font-size: 64px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 48px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+    .banner h2 {
+        font-size: 56px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 44px;
+    }
+}
+
+/* Small Desktop / Laptop */
+@media (max-width: 992px) {
+    .banner h2 {
+        font-size: 48px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 40px;
+    }
+    
+    .scheduleEvent {
+        padding: 30px 0;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 40px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 36px;
+    }
+    
+    .scheduleEvent hr {
+        margin: 15px 0 30px 0;
+    }
+    
+    .text {
+        min-height: 150px;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 576px) {
+    .banner h2 {
+        font-size: 32px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 30px;
+    }
+    
+    .scheduleEvent {
+        width: 95%;
+        padding: 20px 0;
+    }
+    
+    .text {
+        min-height: 120px;
+        padding: 15px 0;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 375px) {
+    .banner h2 {
+        font-size: 28px;
+    }
+    
+    .mainheading,
+    .text h1 {
+        font-size: 26px;
+    }
+    
+    .scheduleEvent hr {
+        margin: 10px 0 20px 0;
+        height: 2px;
+    }
 }

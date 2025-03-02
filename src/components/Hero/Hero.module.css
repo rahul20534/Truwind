@@ -1,118 +1,132 @@
-.hero{
+.hero {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   margin: 50px 0;
-  gap: 25px;
+  gap: clamp(20px, 3vh, 25px);
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.header{
-  font-family: "poppins", sans-serif;
-  color: rgba(42, 42, 42, 1);
+.header {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  h1{
-    font-size: 88px;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    width: 945px;
-    font-family: Raleway;
-    font-weight: 700;
-  }
+.header h1 {
+  font-size: clamp(36px, 6vw, 88px);
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  max-width: 945px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
 }
 
 .gradientText {
   position: relative;
   display: inline-block;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px; 
-    height: 6px; 
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(242, 67, 94, 1));
-  }
 }
 
+.gradientText::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(4px, 0.7vw, 10px); 
+  height: clamp(3px, 0.5vw, 6px); 
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(242, 67, 94, 1));
+}
 
-.description{
+.description {
   display: flex;
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
-
-  p{
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    margin: 0;
-  }
+  padding: 0 10px;
 }
 
-.btn{
+.description p {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn {
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: clamp(14px, 1.8vw, 18px);
   font-weight: 600;
-  width: 200px;
-  height: 24px;
+  width: fit-content;
+  min-width: 150px;
   border-radius: 50px;
-  padding: 18px 25px;
+  padding: clamp(12px, 2vw, 18px) clamp(20px, 2.5vw, 25px);
   background-color: #F2435E;
   border: 1px solid #F2435E;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: clamp(8px, 1.5vw, 15px);
   cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
 
-  img{
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+.btn:hover {
+  background-color: #d83a51;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(242, 67, 94, 0.3);
+}
+
+.btn img {
+  width: clamp(12px, 1.5vw, 18px);
+  height: clamp(12px, 1.5vw, 18px);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover img {
+  transform: translateX(4px);
+}
+
+/* Medium screens */
+@media screen and (max-width: 992px) {
+  .hero {
+    margin: 40px 0;
   }
 }
 
-
-
-@media screen and (max-width: 768px){
-  .hero{
-    margin: 25px 0;
-  }
-
-  .header{
-    h1{
-      font-size: 36px;
-      font-weight: 600;
-      width: 100%;
-    }
-  }
-
-  .description{
-    width: 80%;
-
-    p{
-      font-size: 14px;
-    }
-  }
-
-  .btn{
-    width: 150px;
-    padding: 15px 20px;
-    font-size: 12px;
-
-    img{
-      width: 12px;
-      height: 12px;
-    }
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .hero {
+    margin: 30px 0;
+    gap: 15px;
   }
   
+  .description {
+    width: 90%;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .hero {
+    margin: 25px 0;
+    gap: 15px;
+  }
+  
+  .gradientText::after {
+    bottom: 3px;
+    height: 3px;
+  }
 }

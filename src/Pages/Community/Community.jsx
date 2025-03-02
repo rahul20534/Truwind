@@ -11,11 +11,11 @@ import Footer from '../../components/Footer/Footer'
 const Community = () => {
   return (
     <>
-      <CommunityHeading></CommunityHeading>
-      <OurCommunity></OurCommunity>
-      <Photogrid></Photogrid>
-      <Approach></Approach>
-      <Footer></Footer>
+      <CommunityHeading />
+      <OurCommunity />
+      <Photogrid />
+      <Approach />
+      <Footer />
 
     </>
   )

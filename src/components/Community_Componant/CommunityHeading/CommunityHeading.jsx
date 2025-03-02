@@ -8,19 +8,14 @@ const CommunityHeading = () => {
     return (
         <div className={Styled.communityheading}>
             <div className={Styled.main}>
-
-
-
                 <div className={Styled.text1}>
                     <h1>This is the community </h1>
-                    <img src={img1} alt="" />
-
+                    <img src={img1} alt="Community illustration" />
                 </div>
 
                 <div className={Styled.text2}>
-                    <img src={img2} alt="" />
+                    <img src={img2} alt="Truward illustration" />
                     <h1>page of Truward</h1>
-
                 </div>
             </div>
         </div>

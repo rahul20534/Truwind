@@ -1,237 +1,184 @@
 .event {
-
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 818px;
-  padding: 50px 100px;
+  padding: 50px 5%;
   text-align: center;
   align-items: center;
   box-sizing: border-box;
-  
+}
 
+.event h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #F2435E;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  margin-bottom: 10px;
+}
 
-  h2 {
-    font-family: "Nunito", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #F2435E;
-    text-decoration: underline;
-    text-underline-offset: 10px;
+.event h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 
-
-  }
-
-  h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 52px;
-    font-weight: 600;
-  }
-
-  p {
-    font-family: "Nunito", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    width: 684px;
-    height: 175px;
-  }
-
+.event > p {
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 400;
+  max-width: 684px;
+  width: 100%;
+  margin: 0 auto 40px;
 }
 
 .event_image {
   display: flex;
-  flex-direction: row;
-  
   width: 100%;
+  gap: 5%;
+  margin-top: 20px;
+}
+
+.event_image img {
+  width: 50%;
   height: auto;
-
-
-  img {
-    width: 540px;
-    height: 300px;
-   
-  }
-
-
+  object-fit: cover;
+  max-width: 540px;
 }
 
 .event_text {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 40%;
-  height: 274px;
-  
-  margin-left: 100px;
+  width: 45%;
+}
 
- 
-  h1 {
-    font-size: 22px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    margin-top: 30px;
-  }
+.event_text h1 {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
-  h2 {
-    font-size: 22px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    text-decoration: none;
-    color: black;
-    margin-top: 1px;
-  }
+.event_text h2 {
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
 
-  p {
-    font-size: 18px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 500;
-    width: 97%;
-    height: auto;
-  }
+.event_text p {
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .btn {
   display: flex;
   flex-direction: row;
-  
-  button {
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    width: 140px;
-    height: 40px;
-    border-radius: 50px;
-    padding-right: 30px;
-    color: white;
-    background-color: #F2435E;
-    border: 4px solid #F2435E;
-    outline-offset: none;
-    padding-top: 6.6px;
-    
-    text-align: center;
-    justify-content: center;
-   
-    
-    
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
 
-    img{
-      width: 10px;
-      height: 16.19px;
-      position: relative;
-      top: 2px;
-      left: 20px;
-    }
+.btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  min-width: 140px;
+  height: 40px;
+  border-radius: 50px;
+  color: white;
+  background-color: #F2435E;
+  border: 4px solid #F2435E;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.btn button:hover {
+  background-color: transparent;
+  color: #F2435E;
+}
 
-  }
+.btn button img {
+  width: 10px;
+  height: 16px;
+  margin-left: 10px;
+}
 
-  h1 {
-    font-size: 15px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    text-decoration: underline;
-    color: #F2435E;
-    margin-left: 50px;
-    margin-top: 15px;
+.btn h1 {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #F2435E;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Media Queries for better responsiveness */
+@media screen and (max-width: 1024px) {
+  .event {
+    padding: 40px 5%;
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
-  .event {
-    padding: 50px 20px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1{
-      font-size: 26px;
-      font-weight: 600;
-    }
-  }
-
   .event_image {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    gap: 30px;
   }
-
+  
   .event_image img {
     width: 100%;
-    height: auto;
+    max-width: 540px;
   }
-
+  
   .event_text {
-    height: auto; /* Adjust height dynamically */
-    text-align: center; /* Center text for better mobile experience */
-  }
-
-  .event_text h1 {
-    font-size: 18px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-  }
-
-  .event_text h2 {
-    font-size: 18px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    color: black;
-    margin-top: 10px;
-  }
-
-  .event_text p {
-    font-size: 14px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 500;
+    width: 100%;
     text-align: center;
+    margin-left: 0;
   }
-
+  
   .btn {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
+}
 
-  .btn button {
-    font-size: 15px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    width: 140px;
-    height: 40px;
-    border-radius: 50px;
-    color: white;
-    background-color: #F2435E;
-    border: 4px solid #F2435E;
-    padding: 6px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Adjust spacing between text and icon */
+@media screen and (max-width: 480px) {
+  .event {
+    padding: 30px 15px;
   }
-
-  .btn button img {
-    width: 10px;
-    height: 16px;
-    position: static; /* Remove unnecessary positioning */
+  
+  .event > p {
+    font-size: 16px;
   }
-
-  .btn h1 {
-    font-size: 15px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    text-decoration: underline;
-    color: #F2435E;
-    margin: 0px;
+  
+  .event_text h1 {
+    font-size: 18px;
+  }
+  
+  .event_text h2 {
+    font-size: 16px;
+  }
+  
+  .event_text p {
+    font-size: 14px;
   }
 }
