@@ -21,16 +21,18 @@ const Contact = () => {
                     </div>
 
                     <div className={styled.formlayer}>
+                        <h1>Section 1</h1>
+                        <hr />
                         <div className={styled.upperform}>
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Name</label>
-                                    <p>We’d love to address you personally.</p>
+                                    {/* <p>We’d love to address you personally.</p> */}
                                     <input type="text" placeholder="Enter your name" />
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>Email ID</label>
-                                    <p>Your email will help us share updates, resources and exclusive opportunities.</p>
+                                    {/* <p>Your email will help us share updates, resources and exclusive opportunities.</p> */}
                                     <input type="email" placeholder="Enter your email" />
                                 </div>
                             </div>
@@ -38,12 +40,12 @@ const Contact = () => {
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Phone Number</label>
-                                    <p>For important updates and personalized communication.</p>
+                                    {/* <p>For important updates and personalized communication.</p> */}
                                     <input type="text" placeholder="Enter your number" />
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>City/State</label>
-                                    <p>To connect you with local initiatives and events.</p>
+                                    {/* <p>To connect you with local initiatives and events.</p> */}
                                     <input type="text" placeholder="Enter your City/State" />
                                 </div>
                             </div>
@@ -51,15 +53,17 @@ const Contact = () => {
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Current Work Profile/Role</label>
-                                    <p>Tell us what you do and what drives you professionally.</p>
+                                    {/* <p>Tell us what you do and what drives you professionally.</p> */}
                                     <input type="text" placeholder="Enter your answer" />
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>LinkedIn Profile URL</label>
-                                    <p>We would love to learn more about your journey and connect with you.</p>
+                                    {/* <p>We would love to learn more about your journey and connect with you.</p> */}
                                     <input type="text" placeholder="Enter your link" />
                                 </div>
                             </div>
+                            <h1>Section 2</h1>
+                            <hr />
                         </div>
 
                         <div className={styled.lowerlayer}>

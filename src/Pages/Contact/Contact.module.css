@@ -7,10 +7,12 @@
 }
 
 .member {
-  width: 100%;
+  width: 97.8%;
+  height: 390px;
   padding: 40px 20px;
   background-color: #3B3988;
   text-align: center;
+
 }
 
 .member h1 {
@@ -34,7 +36,7 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: -50px;
+  margin-top: -170px;
   margin-bottom: 30px;
 }
 
@@ -58,12 +60,33 @@
 .formlayer {
   display: flex;
   flex-direction: column;
+
+  hr {
+    margin-top: -2px;
+    width: 100%;
+    border: none;
+    border-top: 3px solid #E7005E; /* This ensures the color applies correctly */
 }
+
+
+}
+
+.formlayer h1 {
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  color: #E7005E;
+}
+
+
 
 .upperform {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .row {
@@ -93,12 +116,13 @@
 }
 
 .inputContainer input {
-  width: 100%;
+  width: 94%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #929292;
   outline: none;
   font-size: 1rem;
+  margin-top: 20px;
 }
 
 .lowerlayer {
@@ -118,7 +142,7 @@
 }
 
 .textAreaContainer textarea {
-  width: 100%;
+  width: 97%;
   height: 80px;
   padding: 10px;
   border-radius: 5px;
@@ -132,21 +156,27 @@
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .btns button {
-  width: 48%;
+  width: 200px;
   padding: 12px;
   font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+
 }
 
 .submit {
   background-color: #F2435E;
   color: white;
   border: none;
+  margin-right: 80px;
+
+
 }
 
 .submit:hover {
@@ -157,6 +187,7 @@
   border: 1px solid #353535;
   background: transparent;
   color: #424242;
+  margin-left: 80px;
 }
 
 .cancel:hover {
@@ -196,7 +227,7 @@
     padding: 20px;
     margin-top: -30px;
   }
-  
+
   .logo h1 {
     font-size: 1.5rem;
   }
@@ -207,24 +238,24 @@
   .member {
     padding: 30px 15px;
   }
-  
+
   .member h1 {
     font-size: 1.8rem;
   }
-  
+
   .form {
     padding: 15px;
     margin-top: -25px;
   }
-  
+
   .inputContainer label {
     font-size: 0.95rem;
   }
-  
+
   .textAreaContainer label {
     font-size: 0.95rem;
   }
-  
+
   .inputContainer input,
   .textAreaContainer textarea {
     padding: 8px;
@@ -236,20 +267,20 @@
   .member h1 {
     font-size: 1.5rem;
   }
-  
+
   .member p {
     font-size: 0.9rem;
   }
-  
+
   .form {
     padding: 12px;
     width: 98%;
   }
-  
+
   .logo img {
     width: 100px;
   }
-  
+
   .logo h1 {
     font-size: 1.3rem;
   }

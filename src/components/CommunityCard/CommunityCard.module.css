@@ -4,6 +4,7 @@
     border-radius: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     background: linear-gradient(265.92deg, #1C1835 -9.54%, #72154E 42.46%, #471B5B 96.71%);
 
 }
