@@ -32,9 +32,10 @@
   max-width: 684px;
   width: 100%;
   margin: 0 auto 40px;
+  font-size: 20px;
 }
 
-.event_image {
+/* .event_image {
   display: flex;
   width: 100%;
   gap: 5%;
@@ -127,7 +128,7 @@
   color: #F2435E;
   margin: 0;
   cursor: pointer;
-}
+} */
 
 /* Media Queries for better responsiveness */
 @media screen and (max-width: 1024px) {

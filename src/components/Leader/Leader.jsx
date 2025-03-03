@@ -1,33 +1,70 @@
 import React from 'react'
 import Styles from './Leader.module.css';
-import image from '../../Image/img9.jpg';
-import Play from '../../Icon/play.svg';
-
+ 
+ 
 const Leader = () => {
     return (
         <>
             <div className={Styles.leader}>
-                <div className={Styles.title}>
-                    <h1>Leadership</h1>
-
+                <div className={Styles.heading}>
+                    <h2>Leadership</h2>
+ 
                 </div>
-                <div className={Styles.headline}>
-                    <h1>Join The Movement to Shape Business For Greater Humanity</h1>
+ 
+                <div className={Styles.subheading}>
+                    <h1>Join Asia’s largest community of impact makers</h1>
+ 
                 </div>
-
-                <div className={Styles.image}>
-                    <img className={Styles.img1} src={image} alt="image" />
+ 
+                <div className={Styles.para}>
+                    <p>A movement to shape business for greater humanity. To make this a little engaging we can include numbers</p>
+ 
                 </div>
-
-                <div className={Styles.founder}>
-                    <h1>Aashi Goel <span>Founder</span></h1>
+ 
+                <div className={Styles.design}>
+                    <div className={Styles.changemaker}>
+                        <div className={Styles.changemakercircle}>
+                            <p>120+</p>
+                        </div>
+                        <div className={Styles.text}>
+                            <p>Changemakers Engaged</p>
+                        </div>
+                    </div>
+ 
+                    <div className={Styles.impact}>
+                        <div className={Styles.event}>
+                            <p>6</p>
+                        </div>
+                        <div className={Styles.text}>
+                            <p>Curated Impact Events</p>
+                        </div>
+                    </div>
+ 
+                    <div className={Styles.social}>
+                        <div className={Styles.media}>
+                            <p>100 K+</p>
+                        </div>
+                        <div className={Styles.text}>
+                            <p>Social Media Impressions</p>
+                        </div>
+                    </div>
+ 
+                    <div className={Styles.partnership}>
+                        <div className={Styles.strategic}>
+                            <p>10+</p>
+                        </div>
+                        <div className={Styles.text}>
+                            <p>Strategic Partnerships</p>
+                        </div>
+ 
+                    </div>
+ 
                 </div>
-
-
+ 
             </div>
         </>
-
+ 
     )
 }
-
+ 
 export default Leader

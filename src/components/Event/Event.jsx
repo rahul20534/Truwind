@@ -10,8 +10,9 @@ const Event = () => {
       <h1>Upcoming Events</h1>
       <p>Join our exclusive, high-impact events designed to bring changemakers together. Hear from thought leaders, collaborate with conscious entrepreneurs, and learn how to integrate conscious practices into your work.
       </p>
+      <h1 style={{color:"#F2435E"}}>Coming Soon</h1>
 
-      <div className={Styles.event_image}>
+      {/* <div className={Styles.event_image}>
         <img src={Image} alt="IMAGE" />
 
         <div className={Styles.event_text}>
@@ -28,7 +29,7 @@ const Event = () => {
 
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   )

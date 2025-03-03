@@ -1,151 +1,248 @@
 .leader {
     width: 100%;
-    height: 720px;
-    background-color: #FFF5F7;
-    
+    height: 790px;
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    background-color: #FFF5F7;
 }
-
-.title{
-    
+ 
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 81px;
     height: auto;
-    margin-top: 20px;
-
-    h1 {
+ 
+    h2 {
+        font-family: Nunito;
+        font-weight: 600;
         font-size: 16px;
-        font-family: "Nunito", sans-serif;
-        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0%;
         text-decoration: underline;
-        text-underline-offset: 10px;
         color: #F2435E;
-    }
-
-}
-
-.headline{
-    width: 880px;
-    height: auto;
-    margin-top: 20px;
-    text-align: center;
-
-    h1{
-        font-size: 52px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
+        text-underline-offset: 10px;
+        margin-top: 30px;
+ 
     }
 }
-
-.video {
-
+ 
+.subheading {
     display: flex;
-    flex-direction: row;
-    margin-top: 70px;
-
-}
-
-.image {
-
-    height: 300px;
-    width: 500px;
-    margin-top: 30px;
-    
-
-
-    .img1 {
-        width: 500px;
-        height: 300px;
-        border-radius: 10px;
-        z-index: -1;
-        border: 1px solid white;
-        outline: none;
-
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: auto;
+ 
+ 
+    h1 {
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 60px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: black;
     }
 }
-
-.founder {
-
+ 
+.para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: auto;
+ 
+ 
+    p {
+        font-family: Nunito;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
+ 
+.design {
+    margin-top: 40px;
+    width: 80%;
+    height: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+ 
+.changemaker,
+.impact,
+.social,
+.partnership {
+ 
+    width: 190px;
+    height: 290px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
-    height: 230px;
-    
-
-    h1 {
-        font-family: "Nunito", sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #F2435E;
-
-        span {
-            font-family: "Nunito", "italic", sans-serif, ;
-            font-weight: 200;
-            font-size: 18px;
-            color: #F2435E;
-        }
-    }
-
+    justify-content: space-around;
+ 
 }
-
-
-
+ 
+.changemakercircle,
+.event,
+.media,
+.strategic {
+    border: 4px solid #F2435E;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+ 
+    p {
+        font-family: Nunito;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 65.47px;
+        letter-spacing: 0%;
+        color: #F2435E;
+    }
+}
+ 
+.text {
+    width: 148px;
+    height: 60px;
+ 
+    height: auto;
+    text-align: center;
+ 
+    p {
+        font-family: Nunito;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30.01px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #F2435E;
+    }
+}
+ 
 @media screen and (max-width: 768px) {
-
     .leader {
-        height: 100%;
-        padding: 0px 20px;
-        box-sizing: border-box;
-    }
-
-    .headline {
         width: 100%;
         height: auto;
-        margin-top: 20px;
-
-        h1 {
-            font-size: 26px;
-            font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF5F7;
+    }
+ 
+    .heading {
+        width: 61px;
+        height: auto;
+        text-align: center;
+ 
+        h2 {
+            font-family: Nunito;
             font-weight: 600;
-        }
-    }
-
-    .image {
-        width: 100%;
-        height: auto;
-        margin-top: 30px;
-
-        .img1 {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            z-index: -1;
-            border: 1px solid white;
-            outline: none;
-        }
-    }
-
-    .founder {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-
-        h1 {
-            font-family: "Nunito", sans-serif;
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 12px;
+            line-height: 30px;
+            letter-spacing: 0%;
             color: #F2435E;
-
-            span {
-                font-family: "Nunito", "italic", sans-serif, ;
-                font-weight: 500;
-                font-size: 16px;
-                color: #F2435E;
-            }
         }
     }
+ 
+    .subheading {
+        width: 352px;
+        height: 93px;
+        text-align: center;
+ 
+        h1 {
+            font-family: Raleway;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 30.52px;
+            letter-spacing: 0%;
+            text-align: center;
+ 
+        }
+ 
+    }
+ 
+    .para {
+        width: 90%;
+        height: auto;
+        text-align: center;
+ 
+        p {
+            font-family: Nunito;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: center;
+ 
+        }
+    }
+ 
+    .design {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+ 
+    .changemaker,.impact,.social,.partnership {
+        width: 121px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+ 
+    .changemakercircle,.event,.media,.strategic {
+        border: 4px solid #F2435E;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        text-align: center;
+ 
+        p {
+            font-family: Nunito;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 35.46px;
+            letter-spacing: 0%;
+            color: #F2435E;
+ 
+        }
+    }
+ 
+    .text {
+        width: 121px;
+        height: auto;
+        text-align: center;
+ 
+        p {
+            font-family: Nunito;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24.55px;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #F2435E;
+        }
+    }
+ 
+ 
 }

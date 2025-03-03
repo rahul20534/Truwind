@@ -22,12 +22,13 @@
 
   h1 {
     font-family: Raleway;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 45px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    width: 560px;
   }
 
   p {
