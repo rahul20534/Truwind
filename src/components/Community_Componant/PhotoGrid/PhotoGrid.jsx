@@ -1,13 +1,13 @@
 import React from 'react';
 import Styled from './PhotoGrid.module.css';
 
-import img1 from '../../../Image/1_5.png';
+import img1 from '../../../Image/img19.png';
 import img2 from '../../../Image/1_6.png';
-import img3 from '../../../Image/1_8.png';
+import img3 from '../../../Image/img1_1.png';
 import img4 from '../../../Image/1_9.png';
-import img5 from '../../../Image/1_0.png';
-import img6 from '../../../Image/1_11.png';
-import img7 from '../../../Image/1_12.png';
+import img5 from '../../../Image/img18.png';
+import img6 from '../../../Image/img1_2.png';
+import img7 from '../../../Image/img1_3.png';
 
 const PhotoGrid = () => {
     return (

@@ -196,6 +196,11 @@
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .contact{
+    width:100%;
+    height: auto;
+    border:2px solid red
+  }
   .row {
     flex-direction: column;
   }
