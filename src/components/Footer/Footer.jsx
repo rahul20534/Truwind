@@ -56,7 +56,7 @@ const Footer = ({ showHeading = true, customText,CustomClick}) => {
                         </div>
 
                         <div className={styled.footernav}>
-                            <Link to='' ><p style={{textDecoration:'none !important'}}>About</p></Link>
+                            <Link to='/' ><p style={{textDecoration:'none'}}>About</p></Link>
                             <Link to='/Community'><p style={{ textDecoration: 'none'  }}>Community</p></Link>
                             <p>Events</p>
 

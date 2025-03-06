@@ -258,7 +258,15 @@
         font-family: Nunito,sans-serif;
         font-weight: 500;
         color: white;
+        text-decoration: none;
+        text-decoration-line: none;
     }
+
+}
+
+.footernav a {
+    text-decoration: none !important;
+    color: inherit; /* Ensures the link color is the same as surrounding text */
 }
 
 .watermark{
