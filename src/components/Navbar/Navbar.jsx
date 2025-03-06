@@ -33,14 +33,15 @@ const Navbar = () => {
           
             style={{ textDecoration: 'none', color: '#525252' }}>Community</Link>
         </div>
-        <div>
-          <Link to='/Event'
+        <div className={styles.event}>
+          <Link
             style={{ textDecoration: 'none', color: '#525252' }}>Events</Link>
+            <span>(Coming soon)</span>
         </div>
-        <div>
+        {/* <div>
           <Link to='/Contact'
             style={{ textDecoration: 'none', color: '#525252' }}>Contact</Link>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.logo}>
@@ -50,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div className={styles.btnContainer}>
-        <div className={styles.subBtn}>Subscribe</div>
+        <div className={styles.subBtn}>Join the community</div>
       </div>
     </div>
   )

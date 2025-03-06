@@ -15,14 +15,15 @@
   color: #F2435E;
   text-decoration: underline;
   text-underline-offset: 10px;
-  margin-bottom: 10px;
+  margin-top: 70px;
 }
 
 .event h1 {
   font-family: "Poppins", sans-serif;
   font-size: clamp(28px, 5vw, 52px);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  color: #2A2A2A;
 }
 
 .event > p {
@@ -31,8 +32,35 @@
   font-weight: 400;
   max-width: 684px;
   width: 100%;
-  margin: 0 auto 40px;
+  /* margin: 0 auto 50px; */
+  margin-top: 50px;
   font-size: 20px;
+  color: #2A2A2A;
+}
+
+.coming{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 271px;
+height: 72px;
+gap: 10px;
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 10px;
+padding-left: 20px;
+border-radius: 12px;
+border-width: 2px;
+border: 2px solid #E7005E80;
+font-family: Nunito;
+font-weight: 600;
+font-size: 38px;
+line-height: 51.83px;
+letter-spacing: 0%;
+color: #E7005E80;
+margin-top: 70px;
+
 }
 
 /* .event_image {

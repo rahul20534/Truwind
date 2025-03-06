@@ -14,12 +14,9 @@ const CommunityCard = () => {
 
                 </div>
 
-                <h1>Join Our Community
-                    And Unleash Your Potential
+                <h1>Join us in the business of making impact
                 </h1>
-                <p>That will help you to unleash your superpowers Truward is a
-                    community-driven conscious business education company dedicated
-                    to catalysing profound change in the business landscape.
+                <p>CONNECT, COLLABORATE AND LEAD IMPACT DRIVEN INNOVATION
                 </p>
 
                 <div className={Styles.btn}>Explore More <img src={arrow} /></div>

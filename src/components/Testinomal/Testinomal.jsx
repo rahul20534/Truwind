@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Style from './Testinomal.module.css';
-import message from '../../Icon/message.svg';
+import message from '../../Icon/messageicon.svg';
 import right from '../../Icon/rightarrow.svg';
 import left from '../../Icon/leftarrow.svg';
 import girl from '../../Image/img10.png';

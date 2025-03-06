@@ -199,7 +199,11 @@
   .contact{
     width:100%;
     height: auto;
-    border:2px solid red
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    
+    
   }
   .row {
     flex-direction: column;
@@ -211,12 +215,21 @@
   }
 
   .btns {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
   }
-
+  
   .btns button {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  .cancel,.submit{
+    width: 70%;
+    height: auto;
   }
 
   .member h1 {
@@ -242,6 +255,18 @@
 @media screen and (max-width: 480px) {
   .member {
     padding: 30px 15px;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancel,.submit{
+    width: 70%;
+    height: auto;
   }
 
   .member h1 {
@@ -277,6 +302,19 @@
     font-size: 0.9rem;
   }
 
+  .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cancel,.submit{
+    width: 70%;
+    height: auto;
+    
+  }
+  
   .form {
     padding: 12px;
     width: 98%;

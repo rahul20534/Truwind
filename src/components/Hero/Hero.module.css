@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 496px;
   align-items: center;
-  margin: 50px 0;
   gap: clamp(20px, 3vh, 25px);
   padding: 0 20px;
   box-sizing: border-box;
+  
 }
 
 .header {
@@ -15,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  
 }
 
 .header h1 {
@@ -27,6 +30,8 @@
   max-width: 945px;
   font-family: "Raleway", sans-serif;
   line-height: 1.2;
+  margin-top: 52px;
+ 
 }
 
 .gradientText {
@@ -46,12 +51,14 @@
 
 .description {
   display: flex;
-  width: 100%;
+  width: 703px;
   max-width: 800px;
   justify-content: center;
   align-items: center;
+  align-items: center;
   font-family: "Nunito", sans-serif;
   padding: 0 10px;
+  /* border: 2px solid red; */
 }
 
 .description p {
@@ -60,6 +67,7 @@
   text-align: center;
   margin: 0;
   line-height: 1.5;
+  margin-top: 35px
 }
 
 .btn {
@@ -80,6 +88,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
+  margin-top: 35px;
 }
 
 .btn:hover {

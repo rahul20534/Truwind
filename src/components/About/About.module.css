@@ -5,7 +5,8 @@
     flex-direction: column;
     font-family: "Nunito", sans-serif;
     gap: 30px;
-    margin: 50px 0px;
+    /* margin: 50px 0px; */
+    /* border: 2px solid red; */
 
     h2{
         font-size: 16px;
@@ -15,6 +16,7 @@
         text-underline-offset: 10px;
         position: relative;
         text-align: center;
+        margin-top: 50px;
     }
 }
 
@@ -31,6 +33,7 @@
     display: flex;
     width: 690px;
     height: auto;
+    margin-top: 30px;
 
     h1{
         font-family: "Raleway",sans-serif;
@@ -48,7 +51,8 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 30px;
     gap: 30px;
 
     p{

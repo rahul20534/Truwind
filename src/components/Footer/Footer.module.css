@@ -165,10 +165,10 @@
         font-family: Nunito, sans-serif;
         font-weight: 600;
         line-height: 25px;
-        background-color: #F2435E;
+        background-color: #E7005E;
         border-radius: 50px;
         outline: none;
-        border: 1px solid #F2435E;
+        border: 1px solid #E7005E;
         color: white;
  
         img {
@@ -237,6 +237,7 @@
     border-radius: 50%;
     margin-left: 15px;
     margin-right: 15px;
+    
 
     img{
         width: 20px;
