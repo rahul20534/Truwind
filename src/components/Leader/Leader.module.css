@@ -152,6 +152,7 @@
         width: 61px;
         height: auto;
         text-align: center;
+        margin-top: -1px;
  
         h2 {
             font-family: Nunito;
@@ -212,6 +213,9 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
  
     .changemakercircle,.event,.media,.strategic {
@@ -234,8 +238,13 @@
  
     .text {
         width: 121px;
-        height: auto;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        
+        margin-top: 10px;
  
         p {
             font-family: Nunito;
