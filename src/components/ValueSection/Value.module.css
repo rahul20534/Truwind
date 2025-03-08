@@ -1,193 +1,136 @@
-.approach {
+.section {
   width: 100%;
   height: auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
 }
 
-.maincontainer {
+.container {
   width: 85%;
-
   height: auto;
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  flex-wrap: wrap; /* Allows better flexibility */
 }
 
-.left {
-
+.textBlock {
   width: 600px;
   height: auto;
-
-  h1 {
-    font-family: Raleway;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 45px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    width: 560px;
-    margin-top: 25px;
-    /* border: 2px solid red; */
-    line-height: 60px;
-    color: #2A2A2A;
-  }
-
-  p {
-    font-family: Nunito;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #E7005E;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    
-    
-
-  }
 }
 
-.right {
+.title {
+  font-family: Raleway;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #2A2A2A;
+  margin-top: 25px;
+}
+
+.subtitle {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #E7005E;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.values {
   display: flex;
   flex-direction: column;
   height: auto;
   margin-top: 70px;
+  gap: 30px;
 }
 
-.personal,
-.impact,
-.Sustainable {
+.valueItem {
   display: flex;
-  height: auto;
   width: 100%;
   gap: 20px;
   justify-content: space-between;
 }
 
-.icon1,
-.icon2,
-.icon3 {
-
+.iconWrapper {
   width: 60px;
   height: 60px;
-
-  img {
-    width: 60px;
-    height: 60px;
-  }
 }
 
-.text1,
-.text2,
-.text3 {
+.iconWrapper img {
+  width: 100%;
+  height: 100%;
+}
 
+.textWrapper {
   display: flex;
   flex-direction: column;
   width: 550px;
-  height: auto;
-  
-
-  h1 {
-    font-family: Nunito;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30.01px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #2A2A2A;
-
-  }
-
-  p {
-    font-family: Nunito;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin-top: 20px;
-
-  }
 }
 
+.valueTitle {
+  font-family: Nunito;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2A2A2A;
+}
 
+.description {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  .maincontainer {
-    display: flex;
+  .container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
     width: 90%;
-    
   }
 
-  .left {
+  .textBlock {
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-
-    h1 {
-      font-family: Raleway,sans-serif;
-      width: 303px;
-      height: 62px;
-      font-size: 26px;
-      font-weight: 600;
-      text-align: center;
-      line-height: 30px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 30px;
-      text-align: center;
-    }
   }
 
-  .right {
+  .title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .values {
     width: 100%;
     margin-top: 20px;
   }
 
-  .personal,
-  .impact,
-  .Sustainable {
+  .valueItem {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .icon1,
-  .icon2,
-  .icon3 {
-    width: 60px;
-    height: 60px;
+  .textWrapper {
+    width: 100%;
+    text-align: center;
   }
 
-  .text1,
-  .text2,
-  .text3 {
-    width: 100%;
+  .valueTitle {
+    font-size: 18px;
+  }
 
-    h1 {
-      font-size: 18px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 14px;
-      text-align: center;
-    }
+  .description {
+    font-size: 14px;
   }
 }

@@ -38,10 +38,6 @@ const Navbar = () => {
             style={{ textDecoration: 'none', color: '#525252' }}>Events</Link>
             <span>(Coming soon)</span>
         </div>
-        {/* <div>
-          <Link to='/Contact'
-            style={{ textDecoration: 'none', color: '#525252' }}>Contact</Link>
-        </div> */}
       </div>
 
       <div className={styles.logo}>
