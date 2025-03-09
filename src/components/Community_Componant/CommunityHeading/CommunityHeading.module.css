@@ -1,7 +1,7 @@
 .comm {
     position: relative;
     width: 100%;
-    height: 328px;
+    min-height: 328px;
     overflow: hidden;
     background-image: url("../../../Image/12.png");
     background-size: cover;
@@ -11,227 +11,89 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin: 0px;
-    
-}
-
-
-.text {
-
+    margin: 0;
+  }
+  
+  .text {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    h1 {
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        font-family: Raleway;
-        font-weight: 600;
-        font-size: 72px;
-        color: #FFFFFF;
-
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -20px;              
-            width: 70%;           
-            height: 10px;            
-            background-color: #E7005E;
-        }
-    }
-
-    
-
-
-}
-
-
-
-
-
-
-/* .communityheading {
-    width: 100%;
-    height: 328px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0px;
-    border: 2px solid red;
-}
-
-.main {
-    width: 100%;
-    height: 328px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px solid green;
-
-    h1 {
-
-        z-index: 1;
-        margin-bottom: 100px;
-    }
-}
-
-.img {
-    width: 100%;
-    height: 328px;
-    z-index: -1;
+  }
+  
+  .text h1 {
     position: relative;
-}
-
- */
-
-
-
-
-
-/* .text1, .text2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    min-height: 96px;
-}
-
-.text1 h1, .text2 h1 {
-    font-family: Raleway, sans-serif;
-    font-size: 72px;
-    font-weight: 600;
-    line-height: 1.2;
-    color: white;
-    margin: 0 10px;
+    display: inline-block;
     text-align: center;
-}
-
-.text1 img, .text2 img {
-    width: 147px;
-    height: 96px;
-    object-fit: contain;
-} */
-
-
-
-/* Large Desktop */
-@media (max-width: 1440px) {
-    .main {
-        width: 75%;
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    color: #FFFFFF;
+    margin: 0; /* Ensures no extra margin that might cause overflow */
+  }
+  
+  /* Thick pink underline under the heading */
+  .text h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 70%;
+    height: 10px;
+    background-color: #E7005E;
+  }
+  
+  /* ----------------------------------- */
+  /*     Responsive Adjustments Below    */
+  /* ----------------------------------- */
+  
+  /* Tablet (up to 768px) */
+  @media (max-width: 768px) {
+    .comm {
+      /* Allow more vertical space on smaller tablets if needed */
+      padding: 40px 15px;
+      min-height: auto; /* Let content dictate height */
     }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 64px;
+  
+    .text h1 {
+      font-size: 48px; /* Reduce font size for tablets */
     }
-}
-
-/* Desktop */
-@media (max-width: 1280px) {
-    .main {
-        width: 80%;
+  
+    .text h1::after {
+      height: 8px; /* Slightly thinner underline on tablet */
+      bottom: -15px; /* Adjust spacing if needed */
     }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 56px;
+  }
+  
+  /* Mobile Large (up to 576px) */
+  @media (max-width: 576px) {
+    .comm {
+      padding: 30px;
     }
-
-    .text1 img,
-    .text2 img {
-        width: 130px;
-        height: 85px;
+  
+    .text h1 {
+      font-size: 36px; /* Further reduce heading size */
     }
-}
-
-/* Small Desktop / Laptop */
-@media (max-width: 1024px) {
-    .main {
-        width: 90%;
+  
+    .text h1::after {
+      height: 6px;
+      bottom: -12px;
     }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 48px;
+  }
+  
+  /* Mobile Small (up to 375px) */
+  @media (max-width: 375px) {
+    .comm {
+      padding: 25px;
     }
-
-    .text1 img,
-    .text2 img {
-        width: 120px;
-        height: 78px;
+  
+    .text h1 {
+      font-size: 26px; /* Even smaller for very small screens */
     }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .communityheading {
-        padding: 30px 15px;
+  
+    .text h1::after {
+      height: 4px; /* Thinner underline */
+      bottom: -10px;
     }
-
-    .main {
-        width: 95%;
-        gap: 15px;
-    }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 40px;
-    }
-
-    .text1 img,
-    .text2 img {
-        width: 100px;
-        height: 65px;
-    }
-}
-
-/* Mobile Large */
-@media (max-width: 576px) {
-
-    .text1,
-    .text2 {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 36px;
-        margin: 0;
-    }
-
-    .text1 img,
-    .text2 img {
-        width: 90px;
-        height: 60px;
-    }
-
-    .communityheading {
-        min-height: auto;
-    }
-}
-
-/* Mobile Small */
-@media (max-width: 375px) {
-    .communityheading {
-        padding: 25px 10px;
-    }
-
-    .text1 h1,
-    .text2 h1 {
-        font-size: 28px;
-    }
-
-    .text1 img,
-    .text2 img {
-        width: 80px;
-        height: 52px;
-    }
-}
+  }
+  

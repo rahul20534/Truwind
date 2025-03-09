@@ -6,7 +6,6 @@
   gap: clamp(20px, 3vh, 25px);
   padding: 0 20px;
   box-sizing: border-box;
-  
 }
 
 .header {
@@ -15,8 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
 }
 
 .header h1 {
@@ -54,17 +51,16 @@
   max-width: 800px;
   justify-content: center;
   align-items: center;
-  align-items: center;
   font-family: "Nunito", sans-serif;
   padding: 0 10px;
-  }
+}
 
 .description p {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 20px);
   font-weight: 500;
   text-align: center;
   margin: 0;
-  margin-top: 25px
+  margin-top: 25px;
 }
 
 .btn {
@@ -75,8 +71,8 @@
   min-width: 150px;
   border-radius: 50px;
   padding: clamp(12px, 2vw, 18px) clamp(20px, 2.5vw, 25px);
-  background-color: #F2435E;
-  border: 1px solid #F2435E;
+  background-color: #E7005E;
+  border: 1px solid #E7005E;
   color: white;
   display: flex;
   justify-content: center;
@@ -105,14 +101,21 @@
   transform: translateX(4px);
 }
 
-/* Medium screens */
+/* Desktop (default above) */
+
+/* Tablet/Medium screens */
 @media screen and (max-width: 992px) {
   .hero {
     margin: 40px 0;
   }
+  
+  .gradientText::after {
+    bottom: -40px;
+    height: 80px;
+  }
 }
 
-/* Small screens */
+/* Mobile/Small screens */
 @media screen and (max-width: 768px) {
   .hero {
     margin: 30px 0;
@@ -122,17 +125,31 @@
   .description {
     width: 90%;
   }
+  
+  .gradientText::after {
+    bottom: -30px;
+    height: 60px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
 }
 
 /* Extra small screens */
 @media screen and (max-width: 480px) {
   .hero {
-    margin: 25px 0;
-    gap: 15px;
+    margin: 20px 0;
+    gap: 10px;
   }
   
   .gradientText::after {
-    bottom: 3px;
-    height: 3px;
+    bottom: -25px;
+    height: 40px;
+    background-size: 90% auto;
+  }
+  
+  .header h1 {
+    margin: 0;
   }
 }

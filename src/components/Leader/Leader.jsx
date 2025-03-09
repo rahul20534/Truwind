@@ -9,7 +9,7 @@ const Leader = () => {
       </div>
 
       <div className={Styles.subheading}>
-        <h1>Join Asia’s largest community of impact makers</h1>
+        <h1>Join Asia's largest community of impact makers</h1>
       </div>
 
       <div className={Styles.description}>
@@ -30,19 +30,19 @@ const Leader = () => {
 
         <div className={Styles.metric}>
           <div className={Styles.metricCircle}>
-            <p>6</p>
+            <p>100K+</p>
           </div>
           <div className={Styles.metricLabel}>
-            <p>Curated Impact Events</p>
+            <p>Social Media Impressions</p>
           </div>
         </div>
 
         <div className={Styles.metric}>
           <div className={Styles.metricCircle}>
-            <p>100 K+</p>
+            <p>6</p>
           </div>
           <div className={Styles.metricLabel}>
-            <p>Social Media Impressions</p>
+            <p>Curated Impact Events</p>
           </div>
         </div>
 

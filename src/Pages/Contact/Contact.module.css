@@ -4,15 +4,16 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
+  /* overflow-x: hidden;  <-- You can uncomment if you still see minor horizontal scroll */
 }
 
 .member {
-  width: 97.8%;
-  height: 390px;
+  width: 100%; /* Make sure it doesn't exceed the screen width */
+  min-height: 390px; /* You can keep a minimum height if needed */
   padding: 40px 20px;
   background-color: #3B3988;
   text-align: center;
-
+  box-sizing: border-box;
 }
 
 .member h1 {
@@ -36,8 +37,9 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: -170px;
+  margin-top: -170px; /* Overlaps the .member section */
   margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -57,18 +59,17 @@
   margin-top: 10px;
 }
 
+/* Form layers & headings */
 .formlayer {
   display: flex;
   flex-direction: column;
-
-  hr {
-    margin-top: -2px;
-    width: 100%;
-    border: none;
-    border-top: 3px solid #E7005E; /* This ensures the color applies correctly */
 }
 
-
+.formlayer hr {
+  margin-top: -2px;
+  width: 100%;
+  border: none;
+  border-top: 3px solid #E7005E;
 }
 
 .formlayer h1 {
@@ -80,8 +81,7 @@
   color: #E7005E;
 }
 
-
-
+/* Upper Form Rows */
 .upperform {
   display: flex;
   flex-direction: column;
@@ -109,12 +109,6 @@
   margin-bottom: 5px;
 }
 
-.inputContainer p {
-  font-size: 0.9rem;
-  color: #707070;
-  margin-bottom: 5px;
-}
-
 .inputContainer input {
   width: 94%;
   padding: 10px;
@@ -125,6 +119,7 @@
   margin-top: 20px;
 }
 
+/* Lower Form Textareas */
 .lowerlayer {
   display: flex;
   flex-direction: column;
@@ -152,12 +147,11 @@
   font-family: inherit;
 }
 
+/* Buttons */
 .btns {
   display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  display: flex;
   justify-content: space-around;
+  margin-top: 25px;
 }
 
 .btns button {
@@ -167,44 +161,56 @@
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-
 }
 
+/* Submit Button */
 .submit {
   background-color: #F2435E;
   color: white;
   border: none;
-  margin-right: 80px;
-
-
+  margin-right: 80px; /* Large margin for desktop */
 }
 
 .submit:hover {
   background-color: #d83551;
 }
 
+/* Cancel Button */
 .cancel {
   border: 1px solid #353535;
   background: transparent;
   color: #424242;
-  margin-left: 80px;
+  margin-left: 80px; /* Large margin for desktop */
 }
 
 .cancel:hover {
   background-color: #f5f5f5;
 }
 
-/* Responsive Design */
+/* ---------------------- */
+/*      MEDIA QUERIES     */
+/* ---------------------- */
 @media screen and (max-width: 768px) {
-  .contact{
-    width:100%;
-    height: auto;
-    border: 2px solid red;
-    display: flex;
-    flex-direction: column;
-    
-    
+
+  .member h1 {
+    font-size: 2rem;
   }
+
+  .member p {
+    font-size: 1rem;
+  }
+
+  .form {
+    width: 95%;
+    padding: 20px;
+    /* Reduce negative margin so it doesn't overflow on small screens */
+    margin-top: -30px; 
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
   .row {
     flex-direction: column;
   }
@@ -219,54 +225,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
   }
-  
-  .btns button {
-    width: 100%;
+
+  /* Override large margins on buttons to prevent horizontal scroll */
+  .cancel,
+  .submit {
+    margin: 0; 
+    width: 80%; 
     margin-bottom: 10px;
-  }
-
-  .cancel,.submit{
-    width: 70%;
-    height: auto;
-  }
-
-  .member h1 {
-    font-size: 2rem;
-  }
-
-  .member p {
-    font-size: 1rem;
-  }
-
-  .form {
-    width: 95%;
-    padding: 20px;
-    margin-top: -30px;
-  }
-
-  .logo h1 {
-    font-size: 1.5rem;
   }
 }
 
-/* Additional responsive breakpoints */
 @media screen and (max-width: 480px) {
   .member {
     padding: 30px 15px;
-  }
-
-  .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cancel,.submit{
-    width: 70%;
-    height: auto;
   }
 
   .member h1 {
@@ -278,10 +250,7 @@
     margin-top: -25px;
   }
 
-  .inputContainer label {
-    font-size: 0.95rem;
-  }
-
+  .inputContainer label,
   .textAreaContainer label {
     font-size: 0.95rem;
   }
@@ -290,9 +259,13 @@
   .textAreaContainer textarea {
     padding: 8px;
   }
+
+  .cancel,
+  .submit {
+    width: 70%;
+  }
 }
 
-/* For very small screens */
 @media screen and (max-width: 320px) {
   .member h1 {
     font-size: 1.5rem;
@@ -302,19 +275,6 @@
     font-size: 0.9rem;
   }
 
-  .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cancel,.submit{
-    width: 70%;
-    height: auto;
-    
-  }
-  
   .form {
     padding: 12px;
     width: 98%;
@@ -326,5 +286,10 @@
 
   .logo h1 {
     font-size: 1.3rem;
+  }
+
+  .cancel,
+  .submit {
+    width: 70%;
   }
 }

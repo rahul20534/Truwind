@@ -12,7 +12,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-  flex-wrap: wrap; /* Allows better flexibility */
 }
 
 .textBlock {
@@ -21,7 +20,7 @@
 }
 
 .title {
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 60px;
@@ -30,7 +29,7 @@
 }
 
 .subtitle {
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
@@ -71,14 +70,14 @@
 }
 
 .valueTitle {
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: #2A2A2A;
 }
 
 .description {
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 400;
   margin-top: 20px;
@@ -91,6 +90,12 @@
     align-items: center;
     gap: 20px;
     width: 90%;
+    margin: 20px 0px;
+  }
+
+  .subtitle{
+    font-size: 14px;
+    text-align: center;
   }
 
   .textBlock {
@@ -104,21 +109,22 @@
     font-size: 26px;
     text-align: center;
     line-height: 30px;
+    font-weight: 600;
+    margin: 10px 0px;
   }
 
-  .subtitle {
-    text-align: center;
-  }
 
   .values {
     width: 100%;
     margin-top: 20px;
+    align-items: center;
   }
 
   .valueItem {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 90%;
   }
 
   .textWrapper {
@@ -128,9 +134,11 @@
 
   .valueTitle {
     font-size: 18px;
+    font-weight: 600;
   }
 
   .description {
     font-size: 14px;
+    font-weight: 400;
   }
 }

@@ -3,27 +3,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
     height: auto;
     padding: 70px 0px;
-    box-sizing: border-box;   
-    gap: 30px; 
-
+    box-sizing: border-box;
+    gap: 30px;
+  
     h2 {
-        font-family: "Raleway", sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        color: #F2435E;
-        margin: 0;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      color: #F2435E;
+      margin: 0;
     }
-
-    
-}
-
-.para{
+  }
+  
+  /* Main testimonial text */
+  .para {
     width: 800px;
     height: auto;
     font-family: "Nunito", sans-serif;
@@ -31,99 +30,87 @@
     font-weight: 400;
     line-height: 30px;
     margin: 0;
-    
-}
-
-.message {
+  }
+  
+  /* Heading + icon container */
+  .message {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 800px;
-    height: 90px;
-    margin-left: 260px;
+    height: auto;
+    margin-left: 260px; /* Keep for desktop if you prefer the offset */
     margin-top: 30px;
-    
-
+  
     h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 48px;
-        font-weight: 600;
-        padding-right: 200px;
-
+      font-family: "Poppins", sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      padding-right: 200px; /* Creates spacing for the icon on desktop */
+      margin: 0;           /* Ensures consistent spacing */
     }
-
+  
     img {
-        width: 80px;
-        height: 80px;
-       
+      width: 80px;
+      height: 80px;
     }
-}
-
-.author {
+  }
+  
+  /* Author + arrows container */
+  .author {
     width: 80%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 30px;
-}
-
-.image {
+  }
+  
+  /* If you have a user image, place it here */
+  .image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     height: auto;
-    
-
+  
     img {
-        width: 70px;
-        height: 70px;
-        border-radius: 70px;
+      width: 70px;
+      height: 70px;
+      border-radius: 70px;
     }
-}
-
-.name {
-    
+  }
+  
+  .name {
     text-align: left;
     width: auto;
-    
-
+  
     h1 {
-        font-family: Nunito;
-        font-size: 22px;
-        font-weight: 600;
-        color: #F2435E;
-        
-        text-align: left;
-      
-        
+      font-family: Nunito, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #F2435E;
+      margin: 0;
     }
-
+  
     p {
-        font-family: Nunito;
-        font-size: 20px;
-        font-style: italic;
-        font-weight: 500;
-        
-        color: #F2435E;
-       
-        text-align: left;
-        width: fit-content;
-        
-        
-
+      font-family: Nunito, sans-serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 500;
+      color: #F2435E;
+      margin: 0;
     }
-}
-
-.arrow{
-    
+  }
+  
+  /* Arrow container */
+  .arrow {
     display: flex;
     align-items: center;
-    
-}
-
-.left,.right{
+  }
+  
+  .left,
+  .right {
     width: 45px;
     height: 45px;
     border: 1px solid #D0D0D0;
@@ -134,61 +121,82 @@
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
-
-
-    img{
-        width: 22px;
-        height: 15px;
+  
+    img {
+      width: 22px;
+      height: 15px;
     }
-}
-
-
-
-@media screen and (max-width: 768px) {
+  }
+  
+  /* ----------------------- */
+  /*       MEDIA QUERIES     */
+  /* ----------------------- */
+  @media screen and (max-width: 768px) {
     .testinomal {
-        h2 {
-            font-size: 14px;
-        }
+      padding: 40px;
+      gap: 20px;
     }
 
+    .testinomal h2 {
+      font-size: 14px;
+    }
+  
     .para {
-        width: 100%;
-        font-size: 18px;
-        line-height: 24px;
+      width: 100%;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 15px; /* Optional horizontal padding */
     }
-
+  
     .message {
-        width: 100%;
-        margin-left: 0px;
-
-        h1 {
-            font-size: 32px;
-            padding-right: 0px;
-        }
-
-        img {
-            width: 60px;
-            height: 60px;
-            margin-top: 20px;
-        }
+      /* Let heading + icon stack vertically on mobile */
+      flex-direction: column;
+      width: auto;        /* Remove fixed width for mobile */
+      margin-left: 0;     /* Center the container */
+      margin-top: 0;      /* Adjust top spacing if desired */
+      gap: 15px;          /* Some vertical gap between heading & icon */
     }
-
+  
+    .message h1 {
+      font-size: 32px;
+      padding-right: 0; /* Remove extra spacing on mobile */
+      margin: 0;        /* Keep heading top/bottom margins minimal */
+    }
+  
+    .message img {
+        display: none;
+    }
+  
     .author {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
     }
-
+  
     .image {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
-
+  
     .name {
-        text-align: center;
-        margin-left: 0px;
+      text-align: center;
+      margin-left: 0px;
+      margin-bottom: 10px;
     }
-
+  
     .arrow {
-        margin-top: 20px;
+      margin-top: 10px;
     }
-}
+  }
+  
+  @media screen and (max-width: 480px) {
+    .message h1 {
+      font-size: 28px;
+    }
+  
+    .message img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  

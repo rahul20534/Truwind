@@ -16,6 +16,10 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
   
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+  
   return (
     <div className={styles.navbar}>
 
@@ -24,16 +28,15 @@ const Navbar = () => {
       </div>
 
       <div className={`${styles.navbarOption} ${menuOpen ? styles.open : ''}`}>
-        <div>
+        <div onClick={closeMenu}>
           <Link to=''
             style={{ textDecoration: 'none', color: '#525252' }}>About</Link>
         </div>
-        <div>
+        <div onClick={closeMenu}>
           <Link to='/Community'
-          
             style={{ textDecoration: 'none', color: '#525252' }}>Community</Link>
         </div>
-        <div className={styles.event}>
+        <div className={styles.event} onClick={closeMenu}>
           <Link
             style={{ textDecoration: 'none', color: '#525252' }}>Events</Link>
             <span>(Coming soon)</span>
@@ -41,7 +44,7 @@ const Navbar = () => {
       </div>
 
       <div className={styles.logo}>
-        <Link to='/'>
+        <Link to='/' onClick={closeMenu}>
         <img src={Logo} alt="This is logo" />
         </Link>
       </div>

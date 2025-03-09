@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 //styles
 import styles from './Hero.module.css'
@@ -7,6 +8,13 @@ import styles from './Hero.module.css'
 import ARROW from '../../Icon/arrow.svg';
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/Contact')
+  }
+  
   return (
     <div className={styles.hero}>
       <div className={styles.header}>
@@ -19,7 +27,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <button className={styles.btn}>
+      <button className={styles.btn} onClick={handleClick}>
         Join Our Movement
         <img src={ARROW} alt="arrow" />
       </button>

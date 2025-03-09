@@ -1,188 +1,215 @@
 .section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff5f7;
+  padding: 70px 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h2 {
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #E7005E;
+  text-underline-offset: 10px;
+  margin: 0;
+}
+
+.subheading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin-top: 30px;
+}
+
+.subheading h1 {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  margin: 0;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin-top: 40px;
+}
+
+.description p {
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.metrics {
+  margin-top: 70px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.metric {
+  width: 190px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.metricCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 190px; 
+  border: 4px solid #E7005E;
+  border-radius: 50%;
+}
+
+.metricCircle p {
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: #E7005E;
+  margin: 0;
+}
+
+.metricLabel {
+  width: 148px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.metricLabel p {
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  color: #E7005E;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .subheading {
+    width: 90%;
+  }
+
+  .subheading h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    width: 80%;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 20px 50px;
+  }
+
+  .heading {
+    width: auto;
+  }
+
+  .heading h2 {
+    font-size: 14px;
+    text-underline-offset: 6px;
+  }
+
+  .subheading {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .subheading h1 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .description {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .description p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .metrics {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .metric {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff5f7;
-    padding: 70px 0;
-    box-sizing: border-box;
-  }
-  
-  .heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .heading h2 {
-    font-family: Nunito;
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: underline;
-    color: #f2435e;
-    text-underline-offset: 10px;
     margin: 0;
   }
-  
-  .subheading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    margin-top: 30px;
-  }
-  
-  .subheading h1 {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 52px;
-    margin: 0;
-    text-align: center;
-    color: #2a2a2a;
-  }
-  
-  .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    margin-top: 40px;
-  }
-  
-  .description p {
-    font-family: Nunito;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    color: #2a2a2a;
-  }
-  
-  .metrics {
-    margin-top: 70px;
-    width: 80%;
-    height: 290px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .metric {
-    width: 190px;
-    height: auto;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
+
   .metricCircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 190px;
-    height: 190px; 
-    border: 4px solid #f2435e;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
   }
-  
+
   .metricCircle p {
-    font-family: Nunito;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 65.47px;
-    color: #f2435e;
+    font-size: 28px;
+    line-height: 32px;
   }
-  
+
   .metricLabel {
-    width: 148px;
-    text-align: center;
+    width: 100%;
+    margin-top: 10px;
   }
-  
+
   .metricLabel p {
-    font-family: Nunito;
+    font-size: 14px;
     font-weight: 400;
-    font-size: 22px;
-    text-align: center;
-    color: #f2435e;
-    margin: 0;
+    line-height: 18px;
   }
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 768px) {
-    .section {
-      padding: 70px 0;
-    }
-  
-    .heading {
-      width: 61px;
-      margin-top: -1px;
-      text-align: center;
-    }
-  
-    .heading h2 {
-      font-size: 12px;
-      line-height: 30px;
-    }
-  
-    .subheading {
-      width: 352px;
-      margin-top: 12px;
-    }
-  
-    .subheading h1 {
-      font-family: Raleway;
-      font-weight: 600;
-      font-size: 26px;
-      line-height: 30.52px;
-      text-align: center;
-    }
-  
-    .description {
-      width: 70%;
-      margin-top: 10px;
-    }
-  
-    .description p {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  
-    .metrics {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 30px;
-      height: auto;
-    }
-  
-    .metric {
-      width: 121px;
-      height: 170px;
-      margin: 15px 0;
-    }
-  
-    .metricCircle {
-      border: 4px solid #f2435e;
-      width: 100px;
-      height: 100px;
-    }
-  
-    .metricCircle p {
-      font-size: 26px;
-      line-height: 35.46px;
-    }
-  
-    .metricLabel {
-      width: 121px;
-      margin-top: 10px;
-    }
-  
-    .metricLabel p {
-      font-size: 18px;
-      line-height: 24.55px;
-    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+  .metricCircle {
+    width: 100px;
+    height: 100px;
   }
-  
+
+  .metricCircle p {
+    font-size: 24px;
+  }
+}

@@ -33,13 +33,16 @@
 .ctaButton button {
     width: 250px;
     height: 60px;
-    font: 600 18px Nunito, sans-serif;
+    font: 600 18px "Nunito", sans-serif;
     background-color: #E7005E;
     border: 1px solid #E7005E;
     border-radius: 50px;
     color: white;
     outline: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ctaButton button img {
@@ -49,7 +52,6 @@
     position: relative;
     top: 2px;
 }
-
 
 .footerInfoSection {
     width: 100%;
@@ -96,12 +98,12 @@
     align-items: center;
     border: 1px solid #fff;
     border-radius: 50%;
+}
 
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.socialIcon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .socialIcon a img {
@@ -127,16 +129,14 @@
 }
 
 .event {
-    cursor:not-allowed;
+    cursor: not-allowed;
 }
 
 .comingSoon {
     color: #E7005E;
     font-weight: 600;
     margin-left: 5px;
-    /* spacing before the parenthesis */
     font-size: 14px;
-    /* adjust as needed */
 }
 
 /* Watermark Section */
@@ -158,26 +158,94 @@
     height: 40px;
 }
 
-/* Responsive Styles for Mobile */
+/* Improved Responsive Styles for Mobile */
 @media screen and (max-width: 768px) {
-    .footerContent {
-        width: 95%;
-        margin-top: 20px;
+    .footer {
+        padding: 10px;
     }
-
-    .footerInfo,
-    .footerCta,
-    .socialIcons,
-    .footerNav,
-    .footerWatermark {
-        width: 90%;
+    
+    .footerContent {
+        width: 100%;
+        padding: 15px 0;
+        border-radius: 20px;
+        gap: 20px;
     }
 
     .ctaButton button {
-        width: 100%;
+        width: 190px;
+        height: 50px;
+        font-size: 12px;
+        font-weight: 600;
+
+        img{
+            width: 12px;
+            height: 12px;
+        }
     }
 
     .footerInfo {
+        width: 90%;
+        max-width: 320px;
+        gap: 15px;
+    }
+
+    .footerInfo h1 {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    .footerInfo p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .socialIcons {
+        width: 90%;
+        max-width: 300px;
+        gap: 15px;
+    }
+
+    .socialIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socialIcon a img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footerNav {
+        width: 90%;
+        justify-content: center;
         margin-top: 20px;
+    }
+
+    .footerNav a {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .comingSoon {
+        font-size: 12px;
+    }
+
+    .footerWatermark {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .footerWatermark h1 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footerWatermark img {
+        width: 80px;
+        height: 36px;
     }
 }

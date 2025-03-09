@@ -74,13 +74,24 @@
 }
 
 @media (max-width: 768px) {
+    .main {
+        padding: 50px 0px;
+    }
+
+    .ourcommunity{
+        gap: 20px;
+    }
+
+    .ourcommunity h2 {
+        font-size: 12px;
+    }
+
     .ourcommunity h1 {
-        font-size: 35px;
-        line-height: 45px;
+        font-size: 26px;
         width: 90%;
     }
     .ourcommunity p {
-        font-size: 15px;
+        font-size: 14px;
         width: 90%;
     }
 }

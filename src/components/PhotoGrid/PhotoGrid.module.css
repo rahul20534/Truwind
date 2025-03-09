@@ -6,13 +6,12 @@
   width: 100%;
   max-width: 100vw;
   height: 100%;
-  padding: 20px 0;
+  padding: 20px;
   box-sizing: border-box;
   margin: 30px 0px 0px 0px;
-  padding: 20px;
-  /* border: 2px solid red; */
+  scroll-snap-type: x mandatory; /* Add smooth snapping for mobile */
+  scrollbar-width: none; /* Firefox */
 }
-
 
 .image {
   flex: 0 0 auto;
@@ -23,6 +22,7 @@
   transition: transform 0.3s ease-in-out;
   margin-top: 10px;
   margin-bottom: 10px;
+  scroll-snap-align: center; /* For mobile smooth scrolling */
 }
 
 /* Target even images */
@@ -39,27 +39,37 @@
   display: none; 
 }
 
-
-/* ============ MEDIA QUERY FOR MOBILE ============ */
-@media (max-width: 768px) {
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
   .photoGrid {
-    display: grid;                       /* Switch from flex to grid on mobile */
-    grid-template-columns: repeat(3, 1fr);  /* 3 columns => first row: 3 images */
-    gap: 10px;
-    overflow-x: hidden;
-    margin: 0 auto;
-    padding: 0px 10px;
+    gap: 15px;
+    padding: 15px;
+    margin: 0;
   }
-
+  
   .image {
-    width: 100%;
-    height: 80px;
-    transform: none;  /* Remove the up/down translation */
+    width: calc(50% - 15px); /* 50% of the container minus half of the gap */
+    height: 180px; /* Slightly smaller height for mobile */
+  }
+  
+  .image:nth-child(even) {
+    transform: translateY(10px);
   }
 
-  /* Also remove any nth-child transforms if you had them */
-  .image:nth-child(even),
   .image:nth-child(odd) {
-    transform: none;
+    transform: translateY(-10px);
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+  .photoGrid {
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .image {
+    width: calc(50% - 7.5px); /* Adjusted to account for smaller gap */
+    height: 140px; /* Even smaller for very small screens */
   }
 }
