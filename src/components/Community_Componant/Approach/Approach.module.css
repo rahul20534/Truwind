@@ -1,4 +1,4 @@
-.Approach {
+.approachSection {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -7,9 +7,9 @@
     width: 100%;
     padding: 40px 20px;
     box-sizing: border-box;
-}
-
-.Approach h2 {
+  }
+  
+  .approachSection h2 {
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -18,134 +18,133 @@
     text-underline-offset: 10px;
     margin-top: 30px;
     align-self: center;
-}
-
-.Approach h1 {
+  }
+  
+  .approachSection h1 {
     font-family: "Poppins", sans-serif;
     font-size: 52px;
     font-weight: 600;
     max-width: 670px;
     line-height: 60px;
     color: #2A2A2A;
-    text-align: center;
     margin: 20px 0 40px;
-}
-
-/* Content Layout */
-.content {
+  }
+  
+  /* Container for all cards */
+  .cardsContainer {
     display: flex;
     width: 100%;
     max-width: 1200px;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
-}
-
-/* Card styling (replaces individual sections) */
-.card {
+  }
+  
+  /* Individual card */
+  .cardItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex: 1;
     min-width: 280px; /* Minimum width before wrapping */
-    max-width: 350px; /* Maximum width to prevent too wide cards */
+    max-width: 350px; /* Maximum width to prevent overly wide cards */
     padding: 20px;
     transition: all 0.3s ease;
-}
-
-.card:hover {
+  }
+  
+  .cardItem:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.card img {
+  }
+  
+  .cardItem img {
     width: 45px;
     height: 45px;
     margin-bottom: 20px;
-}
-
-.card h3 {
+  }
+  
+  .cardItem h3 {
     font-family: "Nunito", sans-serif;
     font-size: 22px;
     font-weight: 700;
     margin: 15px 0;
-}
-
-.card p {
+  }
+  
+  .cardItem p {
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     font-weight: 400;
     max-width: 300px;
-}
-
-/* Responsive Design - Tablet */
-@media screen and (max-width: 1024px) {
-    .content {
-        gap: 30px;
+  }
+  
+  /* Responsive Design - Tablet */
+  @media screen and (max-width: 1024px) {
+    .cardsContainer {
+      gap: 30px;
     }
-    
-    .Approach h1 {
-        font-size: 42px;
-        line-height: 50px;
-        max-width: 600px;
+  
+    .approachSection h1 {
+      font-size: 42px;
+      line-height: 50px;
+      max-width: 600px;
     }
-}
-
-/* Responsive Design - Mobile */
-@media screen and (max-width: 768px) {
-    .Approach h2 {
-        font-size: 14px;
+  }
+  
+  /* Responsive Design - Mobile */
+  @media screen and (max-width: 768px) {
+    .approachSection h2 {
+      font-size: 14px;
     }
-
-    .Approach h1 {
-        font-size: 32px;
-        line-height: 38px;
-        width: 100%;
-        max-width: 100%;
+  
+    .approachSection h1 {
+      font-size: 32px;
+      line-height: 38px;
+      max-width: 100%;
     }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+  
+    .cardsContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
-
-    .card {
-        min-width: 100%;
-        padding: 15px 10px;
+  
+    .cardItem {
+      min-width: 100%;
+      padding: 15px 10px;
     }
-    
-    .card img {
-        margin-bottom: 15px;
+  
+    .cardItem img {
+      margin-bottom: 15px;
     }
-    
-    .card h3 {
-        font-size: 20px;
-        margin: 10px 0;
+  
+    .cardItem h3 {
+      font-size: 20px;
+      margin: 10px 0;
     }
-    
-    .card p {
-        font-size: 16px;
-        margin: 0 auto;
-        width: 90%;
+  
+    .cardItem p {
+      font-size: 16px;
+      margin: 0 auto;
+      width: 90%;
     }
-}
-
-/* Extra Small Screens */
-@media screen and (max-width: 480px) {
-    .Approach {
-        padding: 20px 15px;
+  }
+  
+  /* Extra Small Screens */
+  @media screen and (max-width: 480px) {
+    .approachSection {
+      padding: 20px 15px;
     }
-    
-    .Approach h1 {
-        font-size: 28px;
-        line-height: 34px;
-        margin: 15px 0 25px;
+  
+    .approachSection h1 {
+      font-size: 28px;
+      line-height: 34px;
+      margin: 15px 0 25px;
     }
-    
-    .card img {
-        width: 40px;
-        height: 40px;
+  
+    .cardItem img {
+      width: 40px;
+      height: 40px;
     }
-}
+  }
+  

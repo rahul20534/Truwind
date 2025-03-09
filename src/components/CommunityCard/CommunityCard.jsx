@@ -1,7 +1,10 @@
 import React from 'react'
 import Styles from './CommunityCard.module.css';
+
+
+//icons
 import image from '../../Image/1_2.png';
-import arrow from '../../Icon/Vector.svg';
+import arrow from '../../Icon/Uparrow.svg';
 import Logo from '../../Icon/Truwind.svg';
 
 const CommunityCard = () => {
