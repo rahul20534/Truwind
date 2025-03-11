@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 //styles
@@ -10,6 +10,8 @@ import Logo from '../../Image/Newlogo.jpg';
 
 const Navbar = () => {
 
+  const navigate = useNavigate();
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,6 +20,10 @@ const Navbar = () => {
   
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleClick = () => {
+    navigate('/Contact');
   };
   
   return (
@@ -50,7 +56,7 @@ const Navbar = () => {
       </div>
 
       <div className={styles.btnContainer}>
-        <div className={styles.subBtn}>Join the community</div>
+        <div className={styles.subBtn} onClick={handleClick}>Join the community</div>
       </div>
     </div>
   )

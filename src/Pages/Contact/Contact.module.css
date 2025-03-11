@@ -10,7 +10,7 @@
 .member {
   width: 100%; /* Make sure it doesn't exceed the screen width */
   min-height: 390px; /* You can keep a minimum height if needed */
-  padding: 40px 20px;
+  padding: 40px 20px 200px 20px; /* Increased bottom padding to make room for the form */
   background-color: #3B3988;
   text-align: center;
   box-sizing: border-box;
@@ -28,6 +28,7 @@
   max-width: 680px;
   margin: auto;
   line-height: 1.4;
+  margin-bottom: 30px; /* Add some bottom margin to ensure text is visible */
 }
 
 .form {
@@ -37,7 +38,7 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: -170px; /* Overlaps the .member section */
+  margin-top: -170px; /* Overlaps the .member section but not the text */
   margin-bottom: 30px;
   box-sizing: border-box;
 }
@@ -192,19 +193,23 @@
 /* ---------------------- */
 @media screen and (max-width: 768px) {
 
+  .member {
+    padding-bottom: 100px; /* Adjusted for mobile */
+  }
+
   .member h1 {
     font-size: 2rem;
   }
 
   .member p {
     font-size: 1rem;
+    margin-bottom: 20px; /* Ensure text is visible on mobile */
   }
 
   .form {
     width: 95%;
     padding: 20px;
-    /* Reduce negative margin so it doesn't overflow on small screens */
-    margin-top: -30px; 
+    margin-top: -70px; /* Reduced negative margin so it doesn't overlap text */
   }
 
   .logo h1 {
@@ -238,16 +243,20 @@
 
 @media screen and (max-width: 480px) {
   .member {
-    padding: 30px 15px;
+    padding: 30px 15px 80px 15px; /* Adjusted for smaller screens */
   }
 
   .member h1 {
     font-size: 1.8rem;
   }
+  
+  .member p {
+    margin-bottom: 15px; /* Ensure text is visible on smaller screens */
+  }
 
   .form {
     padding: 15px;
-    margin-top: -25px;
+    margin-top: -60px; /* Further reduced for smaller screens */
   }
 
   .inputContainer label,
