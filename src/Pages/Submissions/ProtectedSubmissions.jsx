@@ -3,6 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Submissions.module.css';
 import Submissions from './Submissions';
 
+// API base URL - Use production URL or local development
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8080' 
+    : 'https://truward-server.onrender.com';
+
 const ProtectedSubmissions = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState('');
@@ -24,7 +29,7 @@ const ProtectedSubmissions = () => {
         setIsLoading(true);
         
         try {
-            const response = await fetch('http://localhost:8080/api/auth/verify', {
+            const response = await fetch(`${API_BASE_URL}/api/auth/verify`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

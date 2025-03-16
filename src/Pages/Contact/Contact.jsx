@@ -5,6 +5,11 @@ import Footer from '../../components/Footer/Footer';
 //logo
 import Logo from '../../Image/Newlogo.jpg';
 
+// API base URL - Use production URL or local development
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8080' 
+    : 'https://truward-server.onrender.com';
+
 const Contact = () => {
     // Form state
     const [formData, setFormData] = useState({
@@ -80,7 +85,7 @@ const Contact = () => {
         if (Object.keys(validationErrors).length === 0) {
             setIsSubmitting(true);
             try {
-                const response = await fetch('http://localhost:8080/api/contact', {
+                const response = await fetch(`${API_BASE_URL}/api/contact`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

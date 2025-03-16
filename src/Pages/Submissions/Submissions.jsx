@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import styles from './Submissions.module.css';
 import Footer from '../../components/Footer/Footer';
 
+// API base URL - Use production URL or local development
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:8080' 
+    : 'https://truward-server.onrender.com';
+
 const Submissions = () => {
     const [submissions, setSubmissions] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -16,7 +21,7 @@ const Submissions = () => {
 
     const fetchSubmissions = async (page) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/contact?page=${page}`);
+            const response = await fetch(`${API_BASE_URL}/api/contact?page=${page}`);
             const data = await response.json();
 
             if (!response.ok || !data.success) {
