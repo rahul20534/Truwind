@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from './Contact.module.css';
 import Footer from '../../components/Footer/Footer';
 
@@ -6,15 +6,169 @@ import Footer from '../../components/Footer/Footer';
 import Logo from '../../Image/Newlogo.jpg';
 
 const Contact = () => {
+    // Form state
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        cityState: '',
+        workProfile: '',
+        linkedinUrl: '',
+        impactAnswer: '',
+        impactDescription: '',
+        joinReason: '',
+        interests: '',
+        contribution: ''
+    });
+
+    // Error state
+    const [errors, setErrors] = useState({});
+    // Loading state
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    // Success message state
+    const [successMessage, setSuccessMessage] = useState('');
+
+    // Handle input changes
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+        // Clear error when user starts typing
+        if (errors[name]) {
+            setErrors(prevErrors => ({
+                ...prevErrors,
+                [name]: ''
+            }));
+        }
+        // Clear success message when user starts typing
+        if (successMessage) {
+            setSuccessMessage('');
+        }
+    };
+
+    // Validate form
+    const validateForm = () => {
+        const newErrors = {};
+
+        // Required field validation
+        if (!formData.name.trim()) newErrors.name = 'Name is required';
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Invalid email format';
+        }
+        if (!formData.phone.trim()) {
+            newErrors.phone = 'Phone number is required';
+        } else if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
+            newErrors.phone = 'Invalid phone number (10 digits required)';
+        }
+        if (!formData.cityState.trim()) newErrors.cityState = 'City/State is required';
+        if (!formData.workProfile.trim()) newErrors.workProfile = 'Work Profile is required';
+        if (!formData.impactAnswer.trim()) newErrors.impactAnswer = 'This field is required';
+        if (!formData.joinReason.trim()) newErrors.joinReason = 'This field is required';
+
+        return newErrors;
+    };
+
+    // Handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const validationErrors = validateForm();
+
+        if (Object.keys(validationErrors).length === 0) {
+            setIsSubmitting(true);
+            try {
+                const response = await fetch('http://localhost:8080/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    throw new Error(data.message || 'Failed to submit form');
+                }
+
+                console.log('Form submitted successfully:', data.data);
+                
+                // Show success message from backend
+                setSuccessMessage('Form submitted successfully! Thank you for joining the Truward community.');
+                
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    cityState: '',
+                    workProfile: '',
+                    linkedinUrl: '',
+                    impactAnswer: '',
+                    impactDescription: '',
+                    joinReason: '',
+                    interests: '',
+                    contribution: ''
+                });
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                setErrors({
+                    submit: error.message || 'Failed to submit form. Please try again later.'
+                });
+            } finally {
+                setIsSubmitting(false);
+            }
+        } else {
+            // Form has errors
+            setErrors(validationErrors);
+            console.log('Form has errors:', validationErrors);
+        }
+    };
+
+    // Handle cancel
+    const handleCancel = () => {
+        // Reset form data
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            cityState: '',
+            workProfile: '',
+            linkedinUrl: '',
+            impactAnswer: '',
+            impactDescription: '',
+            joinReason: '',
+            interests: '',
+            contribution: ''
+        });
+        // Clear errors and success message
+        setErrors({});
+        setSuccessMessage('');
+    };
+
     return (
         <>
             <div className={styled.contact}>
                 <div className={styled.member}>
                     <h1>Membership Form</h1>
-                    <p>Truward is a conscious business education and impact-driven community. Our members are individuals committed to creating a positive change in their spheres of influence. By filling out this form, you’re joining a movement that fosters collaboration, innovation, and purpose.</p>
+                    <p>Truward is a conscious business education and impact-driven community. Our members are individuals committed to creating a positive change in their spheres of influence. By filling out this form, you're joining a movement that fosters collaboration, innovation, and purpose.</p>
                 </div>
 
-                <div className={styled.form}>
+                <form className={styled.form} onSubmit={handleSubmit}>
+                    {successMessage && (
+                        <div className={styled.successMessage}>
+                            {successMessage}
+                        </div>
+                    )}
+                    {errors.submit && (
+                        <div className={styled.errorMessage}>
+                            {errors.submit}
+                        </div>
+                    )}
+
                     <div className={styled.logo}>
                         <img src={Logo} alt="Logo" />
                         <h1>Join the Truward community!</h1>
@@ -27,39 +181,79 @@ const Contact = () => {
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Name</label>
-                                    {/* <p>We’d love to address you personally.</p> */}
-                                    <input type="text" placeholder="Enter your name" />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your name"
+                                        className={errors.name ? styled.errorInput : ''}
+                                    />
+                                    {errors.name && <span className={styled.errorText}>{errors.name}</span>}
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>Email ID</label>
-                                    {/* <p>Your email will help us share updates, resources and exclusive opportunities.</p> */}
-                                    <input type="email" placeholder="Enter your email" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your email"
+                                        className={errors.email ? styled.errorInput : ''}
+                                    />
+                                    {errors.email && <span className={styled.errorText}>{errors.email}</span>}
                                 </div>
                             </div>
 
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Phone Number</label>
-                                    {/* <p>For important updates and personalized communication.</p> */}
-                                    <input type="text" placeholder="Enter your number" />
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your number"
+                                        className={errors.phone ? styled.errorInput : ''}
+                                    />
+                                    {errors.phone && <span className={styled.errorText}>{errors.phone}</span>}
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>City/State</label>
-                                    {/* <p>To connect you with local initiatives and events.</p> */}
-                                    <input type="text" placeholder="Enter your City/State" />
+                                    <input
+                                        type="text"
+                                        name="cityState"
+                                        value={formData.cityState}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your City/State"
+                                        className={errors.cityState ? styled.errorInput : ''}
+                                    />
+                                    {errors.cityState && <span className={styled.errorText}>{errors.cityState}</span>}
                                 </div>
                             </div>
 
                             <div className={styled.row}>
                                 <div className={styled.inputContainer}>
                                     <label>Current Work Profile/Role</label>
-                                    {/* <p>Tell us what you do and what drives you professionally.</p> */}
-                                    <input type="text" placeholder="Enter your answer" />
+                                    <input
+                                        type="text"
+                                        name="workProfile"
+                                        value={formData.workProfile}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your answer"
+                                        className={errors.workProfile ? styled.errorInput : ''}
+                                    />
+                                    {errors.workProfile && <span className={styled.errorText}>{errors.workProfile}</span>}
                                 </div>
                                 <div className={styled.inputContainer}>
                                     <label>LinkedIn Profile URL</label>
-                                    {/* <p>We would love to learn more about your journey and connect with you.</p> */}
-                                    <input type="text" placeholder="Enter your link" />
+                                    <input
+                                        type="url"
+                                        name="linkedinUrl"
+                                        value={formData.linkedinUrl}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter your link"
+                                    />
                                 </div>
                             </div>
                             <h1>Section 2</h1>
@@ -69,39 +263,66 @@ const Contact = () => {
                         <div className={styled.lowerlayer}>
                             {[
                                 {
+                                    name: 'impactAnswer',
                                     label: "Do you believe you are creating an impact in your community or work?",
-                                    placeholder: "Yes/No/Not sure."
+                                    placeholder: "Yes/No/Not sure.",
+                                    required: true
                                 },
                                 {
-                                    label: "If yes, we’d love to know how!",
+                                    name: 'impactDescription',
+                                    label: "If yes, we'd love to know how!",
                                     placeholder: "Feel free to share any projects or contributions."
                                 },
                                 {
-                                    label: "Why do you want to be a part of the TrueWord community?",
-                                    placeholder: "This helps us understand your motivation."
+                                    name: 'joinReason',
+                                    label: "Why do you want to be a part of the Truward community?",
+                                    placeholder: "This helps us understand your motivation.",
+                                    required: true
                                 },
                                 {
+                                    name: 'interests',
                                     label: "What topics, causes, or areas of impact interest you the most?",
                                     placeholder: "Examples: Environment, education, entrepreneurship, etc."
                                 },
                                 {
-                                    label: "How do you hope to contribute to the TrueWord community?",
+                                    name: 'contribution',
+                                    label: "How do you hope to contribute to the Truward community?",
                                     placeholder: "We believe every member brings unique strengths. Share yours!"
                                 }
                             ].map((field, index) => (
                                 <div key={index} className={styled.textAreaContainer}>
                                     <label>{field.label}</label>
-                                    <textarea placeholder={field.placeholder}></textarea>
+                                    <textarea
+                                        name={field.name}
+                                        value={formData[field.name]}
+                                        onChange={handleInputChange}
+                                        placeholder={field.placeholder}
+                                        className={errors[field.name] ? styled.errorInput : ''}
+                                    />
+                                    {errors[field.name] && <span className={styled.errorText}>{errors[field.name]}</span>}
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     <div className={styled.btns}>
-                        <button className={styled.cancel}>Cancel</button>
-                        <button className={styled.submit}>Submit</button>
+                        <button 
+                            type="button" 
+                            className={styled.cancel} 
+                            onClick={handleCancel}
+                            disabled={isSubmitting}
+                        >
+                            Cancel
+                        </button>
+                        <button 
+                            type="submit" 
+                            className={`${styled.submit} ${isSubmitting ? styled.submitting : ''}`}
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Submitting...' : 'Submit'}
+                        </button>
                     </div>
-                </div>
+                </form>
             </div>
             <Footer showHeading={false} customText="Home" CustomClick="/" />
         </>

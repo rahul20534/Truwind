@@ -1,0 +1,409 @@
+.submissionsContainer {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    min-height: calc(100vh - 160px); /* Account for footer */
+}
+
+.submissionsContainer h1 {
+    color: #3B3988;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.submissionCount {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.submissionsList {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin-bottom: 40px;
+}
+
+.submissionCard {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    border: 1px solid #e0e0e0;
+}
+
+.submissionCard.expanded {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #3B3988;
+}
+
+.submissionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #3B3988;
+}
+
+.submissionHeader h2 {
+    color: #3B3988;
+    font-size: 1.3rem;
+    margin: 0;
+    flex: 1;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+.date {
+    color: #666;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.basicInfo {
+    margin: 0 -8px 15px -8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #e8e8e8;
+}
+
+.detailRow strong {
+    color: #444;
+    min-width: 90px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.detailRow span, .detailRow a {
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.detailRow a {
+    color: #3B3988;
+    text-decoration: none;
+}
+
+.detailRow a:hover {
+    text-decoration: underline;
+}
+
+.expandButton {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #3B3988;
+    color: #3B3988;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    margin-top: 5px;
+}
+
+.expandButton:hover {
+    background: #3B3988;
+    color: white;
+}
+
+.expandedContent {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contactInfo {
+    margin-bottom: 20px;
+}
+
+.contactInfo h3, .submissionAnswers h3 {
+    color: #3B3988;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.submissionAnswers {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.answer {
+    margin-bottom: 12px;
+}
+
+.answer:last-child {
+    margin-bottom: 0;
+}
+
+.answer strong {
+    display: block;
+    color: #444;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.answer p {
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.pageButton {
+    background: #3B3988;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+    background: #2e2c6a;
+}
+
+.pageButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Loading State */
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3B3988;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.errorContainer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.errorContainer h2 {
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.errorContainer p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.retryButton {
+    background: #3B3988;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.retryButton:hover {
+    background: #2e2c6a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .submissionsContainer {
+        margin: 40px auto;
+    }
+
+    .submissionsList {
+        gap: 20px;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+
+    .submissionCard {
+        padding: 15px;
+        margin-bottom: 0;
+        border: 1px solid #e0e0e0;
+    }
+
+    .submissionCard.expanded {
+        border-color: #3B3988;
+    }
+
+    .submissionHeader {
+        margin: -15px -15px 15px -15px;
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        margin-top: 10px;
+    }
+
+    .basicInfo {
+        margin: 0 -4px 15px -4px;
+        padding: 4px;
+    }
+
+    .detailRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .detailRow strong {
+        margin-bottom: 5px;
+    }
+}
+
+/* Authentication Styles */
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.authCard {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.authCard h2 {
+    color: #3B3988;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.authCard p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+    border-color: #3B3988;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 57, 136, 0.1);
+}
+
+.authButton {
+    background: #3B3988;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.authButton:hover {
+    background: #2e2c6a;
+}
+
+.errorText {
+    color: #dc3545;
+    font-size: 0.9rem;
+    text-align: left;
+} 

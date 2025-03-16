@@ -1,10 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 //Pages
 import Home from "./Pages/Home/Home"
 import Community from './Pages/Community/Community'
 import Event from './Pages/Event/Event'
 import Contact from './Pages/Contact/Contact'
+import ProtectedSubmissions from './Pages/Submissions/ProtectedSubmissions'
 import ScrollToTop from "./ScrollToTop"
 
 //components
@@ -15,18 +16,18 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <ScrollToTop></ScrollToTop>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Community" element={<Community/>}/>
-        <Route path="/Event" element={<Event/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
-        
+        <Route path="/community" element={<Community/>}/>
+        <Route path="/event" element={<Event/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/submissions" element={<ProtectedSubmissions/>}/>
       </Routes>
       <Form/>
-    </BrowserRouter>
+    </Router>
   )
 }
 

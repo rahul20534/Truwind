@@ -302,3 +302,78 @@
     width: 70%;
   }
 }
+
+.errorInput {
+    border-color: #ff4444 !important;
+    background-color: #fff8f8;
+}
+
+.errorText {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+}
+
+.inputContainer input,
+.textAreaContainer textarea {
+    transition: border-color 0.3s ease;
+}
+
+.inputContainer input:focus,
+.textAreaContainer textarea:focus {
+    border-color: #3B3988;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 57, 136, 0.1);
+}
+
+.successMessage {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.errorMessage {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.submit:disabled,
+.cancel:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submitting {
+    position: relative;
+    color: transparent;
+}
+
+.submitting::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
