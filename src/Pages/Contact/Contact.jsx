@@ -13,17 +13,17 @@ const API_BASE_URL = window.location.hostname === 'localhost'
 const Contact = () => {
     // Form state
     const [formData, setFormData] = useState({
-        name: 'Rahul Kumar',
-        email: 'beingrahuuldev@gmail.com',
-        phone: '8287369332',
-        cityState: 'New Delhi',
-        workProfile: 'Software Engineer',
-        linkedinUrl: 'https://www.linkedin.com/in/beingrahuul/',
-        impactAnswer: 'Yes  ',
-        impactDescription: 'I am a software engineer and I am creating an impact in my community by developing software solutions that help people in need.',
-        joinReason: 'I want to be a part of the Truward community because I want to learn and grow as a software engineer and I want to help others in need.',
-        interests: 'Software Development, Machine Learning, Artificial Intelligence',
-        contribution: 'I want to contribute to the Truward community by sharing my knowledge and skills with others.'
+        name: '',
+        email: '',
+        phone: '',
+        cityState: '',
+        workProfile: '',
+        linkedinUrl: '',
+        impactAnswer: '',
+        impactDescription: '',
+        joinReason: '',
+        interests: '',
+        contribution: ''
     });
 
     // Error state
