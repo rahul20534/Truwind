@@ -377,3 +377,150 @@
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+/* Success Popup Styles */
+.successPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.successPopup {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.successIcon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.successIcon:before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(75, 181, 67, 0.05);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.successIcon:after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgba(75, 181, 67, 0.2);
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.checkmark {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #4BB543; /* Green color for checkmark background */
+  border-radius: 50%;
+  top: 30px;
+  left: 30px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.checkmark svg {
+  width: 30px;
+  height: 30px;
+  stroke: white;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: draw 0.5s ease forwards 0.3s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.successPopup h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.closePopupBtn {
+  background-color: #F2435E;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.closePopupBtn:hover {
+  background-color: #d83551;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .successPopup {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .successIcon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .successIcon:before {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .successIcon:after {
+    width: 75px;
+    height: 75px;
+    top: 12.5px;
+    left: 12.5px;
+  }
+  
+  .checkmark {
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: 25px;
+  }
+  
+  .checkmark svg {
+    width: 25px;
+    height: 25px;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Submissions.module.css';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 
 // API base URL - Use production URL or local development
@@ -14,10 +15,25 @@ const Submissions = () => {
     const [pagination, setPagination] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [expandedCard, setExpandedCard] = useState(null);
-
+    const [selectedSubmissions, setSelectedSubmissions] = useState([]);
+    const [isSelecting, setIsSelecting] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
+    
+    const navigate = useNavigate();
+    
     useEffect(() => {
         fetchSubmissions(currentPage);
     }, [currentPage]);
+
+    // Clear success message after 5 seconds
+    useEffect(() => {
+        if (successMessage) {
+            const timer = setTimeout(() => {
+                setSuccessMessage('');
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [successMessage]);
 
     const fetchSubmissions = async (page) => {
         try {
@@ -50,10 +66,83 @@ const Submissions = () => {
         setCurrentPage(newPage);
         setLoading(true);
         setExpandedCard(null);
+        setSelectedSubmissions([]);
     };
 
     const toggleCardExpansion = (submissionId) => {
         setExpandedCard(expandedCard === submissionId ? null : submissionId);
+    };
+
+    const handleSelectSubmission = (submissionId) => {
+        setSelectedSubmissions(prev => {
+            if (prev.includes(submissionId)) {
+                return prev.filter(id => id !== submissionId);
+            } else {
+                return [...prev, submissionId];
+            }
+        });
+    };
+
+    const handleSelectAll = () => {
+        if (selectedSubmissions.length === submissions.length) {
+            setSelectedSubmissions([]);
+        } else {
+            setSelectedSubmissions(submissions.map(sub => sub._id));
+        }
+    };
+
+    const handleConfirmation = async (submissionId) => {
+        try{
+            const response = await fetch(`${API_BASE_URL}/api/membership/confirm`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userId: submissionId }),
+            });
+
+            if (!response.ok) { 
+                throw new Error('Failed to send confirmation email');
+            }
+
+            const data = await response.json();
+            console.log('Confirmation email sent:', data.message);
+            setSuccessMessage('Confirmation email sent successfully!');
+
+            // Reset selection after sending
+            setSelectedSubmissions([]);
+            setIsSelecting(false);
+        } catch (error) {
+            console.error('Error sending confirmation email:', error);
+            setError('Failed to send confirmation email');
+        }
+    };
+
+    const handleBulkConfirmation = async () => {
+        try{
+            const response = await fetch(`${API_BASE_URL}/api/membership/confirmMultiple`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ userIds: selectedSubmissions }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send confirmation emails');
+            }
+
+            const data = await response.json();
+            console.log('Confirmation emails sent:', data.message);
+            setSuccessMessage(`${selectedSubmissions.length} confirmation emails sent successfully!`);
+
+            // Reset selection after sending
+            setSelectedSubmissions([]);
+            setIsSelecting(false);
+        } catch (error) {
+            console.error('Error sending confirmation emails:', error);
+            setError('Failed to send confirmation emails');
+        }
     };
 
     if (loading) {
@@ -80,7 +169,51 @@ const Submissions = () => {
     return (
         <>
             <div className={styles.submissionsContainer}>
-                <h1>Form Submissions</h1>
+                {successMessage && (
+                    <div className={styles.successMessage}>
+                        {successMessage}
+                    </div>
+                )}
+                <div className={styles.headerActions}>
+                    <h1>Form Submissions</h1>
+                    <button className={styles.confirmUsersButton} onClick={() => navigate('/confirm-users')}>Confirmed Users</button>
+                    <div className={styles.actionButtons}>
+                        {!isSelecting ? (
+                            <button 
+                                className={styles.selectButton}
+                                onClick={() => setIsSelecting(true)}
+                            >
+                                Select Multiple
+                            </button>
+                        ) : (
+                            <>
+                                <button 
+                                    className={styles.selectAllButton}
+                                    onClick={handleSelectAll}
+                                >
+                                    {selectedSubmissions.length === submissions.length ? 'Deselect All' : 'Select All'}
+                                </button>
+                                <button 
+                                    className={styles.confirmButton}
+                                    onClick={handleBulkConfirmation}
+                                    disabled={selectedSubmissions.length === 0}
+                                >
+                                    Send Confirmation ({selectedSubmissions.length})
+                                </button>
+                                <button 
+                                    className={styles.cancelButton}
+                                    onClick={() => {
+                                        setIsSelecting(false);
+                                        setSelectedSubmissions([]);
+                                    }}
+                                >
+                                    Cancel
+                                </button>
+                            </>
+                        )}
+                    </div>
+                </div>
+
                 {pagination && (
                     <p className={styles.submissionCount}>
                         Showing {submissions.length} of {pagination.totalItems} submissions
@@ -93,7 +226,19 @@ const Submissions = () => {
                             className={`${styles.submissionCard} ${expandedCard === submission._id ? styles.expanded : ''}`}
                         >
                             <div className={styles.submissionHeader}>
-                                <h2>{submission.name}</h2>
+                                <div className={styles.headerLeft}>
+                                    {isSelecting && (
+                                        <label className={styles.checkboxLabel}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedSubmissions.includes(submission._id)}
+                                                onChange={() => handleSelectSubmission(submission._id)}
+                                                className={styles.checkbox}
+                                            />
+                                        </label>
+                                    )}
+                                    <h2>{submission.name}</h2>
+                                </div>
                                 <span className={styles.date}>
                                     {formatDate(submission.createdAt)}
                                 </span>
@@ -163,6 +308,9 @@ const Submissions = () => {
                                                 <p>{submission.contribution}</p>
                                             </div>
                                         )}
+                                    </div>
+                                    <div className={styles.confirmationBtn} onClick={() => handleConfirmation(submission._id)}>
+                                        Send Confirmation Email
                                     </div>
                                 </div>
                             )}

@@ -6,12 +6,14 @@ import Community from './Pages/Community/Community'
 import Event from './Pages/Event/Event'
 import Contact from './Pages/Contact/Contact'
 import ProtectedSubmissions from './Pages/Submissions/ProtectedSubmissions'
+import ProtectedConfirmUsers from './Pages/ConfirmUsers/ProtectedConfirmUsers'
+
+//Scroll to top
 import ScrollToTop from "./ScrollToTop"
 
 //components
 import Navbar from "./components/Navbar/Navbar"
 import Form from './components/Form/Form';
-
 function App() {
 
 
@@ -25,6 +27,7 @@ function App() {
         <Route path="/event" element={<Event/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/submissions" element={<ProtectedSubmissions/>}/>
+        <Route path="/confirm-users" element={<ProtectedConfirmUsers/>}/>
       </Routes>
       <Form/>
     </Router>

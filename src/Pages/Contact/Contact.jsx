@@ -13,17 +13,17 @@ const API_BASE_URL = window.location.hostname === 'localhost'
 const Contact = () => {
     // Form state
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        cityState: '',
-        workProfile: '',
-        linkedinUrl: '',
-        impactAnswer: '',
-        impactDescription: '',
-        joinReason: '',
-        interests: '',
-        contribution: ''
+        name: 'Rahul Kumar',
+        email: 'beingrahuuldev@gmail.com',
+        phone: '8287369332',
+        cityState: 'New Delhi',
+        workProfile: 'Software Engineer',
+        linkedinUrl: 'https://www.linkedin.com/in/beingrahuul/',
+        impactAnswer: 'Yes  ',
+        impactDescription: 'I am a software engineer and I am creating an impact in my community by developing software solutions that help people in need.',
+        joinReason: 'I want to be a part of the Truward community because I want to learn and grow as a software engineer and I want to help others in need.',
+        interests: 'Software Development, Machine Learning, Artificial Intelligence',
+        contribution: 'I want to contribute to the Truward community by sharing my knowledge and skills with others.'
     });
 
     // Error state
@@ -32,6 +32,8 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     // Success message state
     const [successMessage, setSuccessMessage] = useState('');
+    // Control success popup visibility
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
     // Handle input changes
     const handleInputChange = (e) => {
@@ -50,6 +52,7 @@ const Contact = () => {
         // Clear success message when user starts typing
         if (successMessage) {
             setSuccessMessage('');
+            setShowSuccessPopup(false);
         }
     };
 
@@ -72,7 +75,10 @@ const Contact = () => {
         if (!formData.cityState.trim()) newErrors.cityState = 'City/State is required';
         if (!formData.workProfile.trim()) newErrors.workProfile = 'Work Profile is required';
         if (!formData.impactAnswer.trim()) newErrors.impactAnswer = 'This field is required';
+        if (!formData.impactDescription.trim()) newErrors.impactDescription = 'This field is required';
         if (!formData.joinReason.trim()) newErrors.joinReason = 'This field is required';
+        if (!formData.interests.trim()) newErrors.interests = 'This field is required';
+        if (!formData.contribution.trim()) newErrors.contribution = 'This field is required';
 
         return newErrors;
     };
@@ -103,6 +109,8 @@ const Contact = () => {
                 
                 // Show success message from backend
                 setSuccessMessage('Form submitted successfully! Thank you for joining the Truward community.');
+                // Show success popup
+                setShowSuccessPopup(true);
                 
                 // Reset form
                 setFormData({
@@ -152,22 +160,40 @@ const Contact = () => {
         // Clear errors and success message
         setErrors({});
         setSuccessMessage('');
+        setShowSuccessPopup(false);
+    };
+
+    // Close success popup
+    const closeSuccessPopup = () => {
+        setShowSuccessPopup(false);
     };
 
     return (
         <>
             <div className={styled.contact}>
+                {/* Success Popup */}
+                {showSuccessPopup && (
+                    <div className={styled.successPopupOverlay}>
+                        <div className={styled.successPopup}>
+                            <div className={styled.successIcon}>
+                                <div className={styled.checkmark}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="6 12 10 16 18 8"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3>{successMessage}</h3>
+                            <button onClick={closeSuccessPopup} className={styled.closePopupBtn}>Close</button>
+                        </div>
+                    </div>
+                )}
+
                 <div className={styled.member}>
                     <h1>Membership Form</h1>
                     <p>Truward is a conscious business education and impact-driven community. Our members are individuals committed to creating a positive change in their spheres of influence. By filling out this form, you're joining a movement that fosters collaboration, innovation, and purpose.</p>
                 </div>
 
                 <form className={styled.form} onSubmit={handleSubmit}>
-                    {successMessage && (
-                        <div className={styled.successMessage}>
-                            {successMessage}
-                        </div>
-                    )}
                     {errors.submit && (
                         <div className={styled.errorMessage}>
                             {errors.submit}
@@ -270,29 +296,22 @@ const Contact = () => {
                                 {
                                     name: 'impactAnswer',
                                     label: "Do you believe you are creating an impact in your community or work?",
-                                    placeholder: "Yes/No/Not sure.",
-                                    required: true
                                 },
                                 {
                                     name: 'impactDescription',
                                     label: "If yes, we'd love to know how!",
-                                    placeholder: "Feel free to share any projects or contributions."
                                 },
                                 {
                                     name: 'joinReason',
                                     label: "Why do you want to be a part of the Truward community?",
-                                    placeholder: "This helps us understand your motivation.",
-                                    required: true
                                 },
                                 {
                                     name: 'interests',
                                     label: "What topics, causes, or areas of impact interest you the most?",
-                                    placeholder: "Examples: Environment, education, entrepreneurship, etc."
                                 },
                                 {
                                     name: 'contribution',
                                     label: "How do you hope to contribute to the Truward community?",
-                                    placeholder: "We believe every member brings unique strengths. Share yours!"
                                 }
                             ].map((field, index) => (
                                 <div key={index} className={styled.textAreaContainer}>
@@ -301,7 +320,6 @@ const Contact = () => {
                                         name={field.name}
                                         value={formData[field.name]}
                                         onChange={handleInputChange}
-                                        placeholder={field.placeholder}
                                         className={errors[field.name] ? styled.errorInput : ''}
                                     />
                                     {errors[field.name] && <span className={styled.errorText}>{errors[field.name]}</span>}
