@@ -1,0 +1,47 @@
+.members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 70px 40px;
+    width: 100%;
+    gap: 50px;
+    background-color: #F8F8F8;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .members {
+        padding: 60px 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .members {
+        padding: 50px 25px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .members {
+        padding: 40px 20px;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .members {
+        padding: 30px 15px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .members {
+        padding: 25px 10px;
+    }
+    
+}

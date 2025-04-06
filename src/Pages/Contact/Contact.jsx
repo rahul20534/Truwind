@@ -108,7 +108,7 @@ const Contact = () => {
                 console.log('Form submitted successfully:', data.data);
                 
                 // Show success message from backend
-                setSuccessMessage('Form submitted successfully! Thank you for joining the Truward community.');
+                setSuccessMessage('Thank you for your submission! We\'ll be in touch soon..');
                 // Show success popup
                 setShowSuccessPopup(true);
                 
@@ -217,7 +217,6 @@ const Contact = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your name"
                                         className={errors.name ? styled.errorInput : ''}
                                     />
                                     {errors.name && <span className={styled.errorText}>{errors.name}</span>}
@@ -229,7 +228,6 @@ const Contact = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your email"
                                         className={errors.email ? styled.errorInput : ''}
                                     />
                                     {errors.email && <span className={styled.errorText}>{errors.email}</span>}
@@ -244,7 +242,6 @@ const Contact = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your number"
                                         className={errors.phone ? styled.errorInput : ''}
                                     />
                                     {errors.phone && <span className={styled.errorText}>{errors.phone}</span>}
@@ -256,7 +253,6 @@ const Contact = () => {
                                         name="cityState"
                                         value={formData.cityState}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your City/State"
                                         className={errors.cityState ? styled.errorInput : ''}
                                     />
                                     {errors.cityState && <span className={styled.errorText}>{errors.cityState}</span>}
@@ -271,7 +267,6 @@ const Contact = () => {
                                         name="workProfile"
                                         value={formData.workProfile}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your answer"
                                         className={errors.workProfile ? styled.errorInput : ''}
                                     />
                                     {errors.workProfile && <span className={styled.errorText}>{errors.workProfile}</span>}
@@ -283,7 +278,6 @@ const Contact = () => {
                                         name="linkedinUrl"
                                         value={formData.linkedinUrl}
                                         onChange={handleInputChange}
-                                        placeholder="Enter your link"
                                     />
                                 </div>
                             </div>
@@ -296,22 +290,27 @@ const Contact = () => {
                                 {
                                     name: 'impactAnswer',
                                     label: "Do you believe you are creating an impact in your community or work?",
+                                    placeholder: "Yes/No/Not sure."
                                 },
                                 {
                                     name: 'impactDescription',
                                     label: "If yes, we'd love to know how!",
+                                    placeholder: "Feel free to share any projects, initiatives, or contributions that you're proud of.."
                                 },
                                 {
                                     name: 'joinReason',
                                     label: "Why do you want to be a part of the Truward community?",
+                                    placeholder: "This helps us understand your motivation and aspirations."
                                 },
                                 {
                                     name: 'interests',
                                     label: "What topics, causes, or areas of impact interest you the most?",
+                                    placeholder: "Examples: Environment, education, entrepreneurship, conscious living, etc."
                                 },
                                 {
                                     name: 'contribution',
                                     label: "How do you hope to contribute to the Truward community?",
+                                    placeholder: "We believe every member brings unique strengths. Share yours!"
                                 }
                             ].map((field, index) => (
                                 <div key={index} className={styled.textAreaContainer}>
@@ -321,6 +320,7 @@ const Contact = () => {
                                         value={formData[field.name]}
                                         onChange={handleInputChange}
                                         className={errors[field.name] ? styled.errorInput : ''}
+                                        placeholder={field.placeholder}
                                     />
                                     {errors[field.name] && <span className={styled.errorText}>{errors[field.name]}</span>}
                                 </div>
@@ -329,14 +329,6 @@ const Contact = () => {
                     </div>
 
                     <div className={styled.btns}>
-                        <button 
-                            type="button" 
-                            className={styled.cancel} 
-                            onClick={handleCancel}
-                            disabled={isSubmitting}
-                        >
-                            Cancel
-                        </button>
                         <button 
                             type="submit" 
                             className={`${styled.submit} ${isSubmitting ? styled.submitting : ''}`}

@@ -151,7 +151,7 @@
 /* Buttons */
 .btns {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 25px;
 }
 
@@ -169,24 +169,12 @@
   background-color: #F2435E;
   color: white;
   border: none;
-  margin-right: 80px; /* Large margin for desktop */
 }
 
 .submit:hover {
   background-color: #d83551;
 }
 
-/* Cancel Button */
-.cancel {
-  border: 1px solid #353535;
-  background: transparent;
-  color: #424242;
-  margin-left: 80px; /* Large margin for desktop */
-}
-
-.cancel:hover {
-  background-color: #f5f5f5;
-}
 
 /* ---------------------- */
 /*      MEDIA QUERIES     */
@@ -233,7 +221,7 @@
   }
 
   /* Override large margins on buttons to prevent horizontal scroll */
-  .cancel,
+
   .submit {
     margin: 0; 
     width: 80%; 
@@ -269,7 +257,7 @@
     padding: 8px;
   }
 
-  .cancel,
+
   .submit {
     width: 70%;
   }
@@ -297,7 +285,6 @@
     font-size: 1.3rem;
   }
 
-  .cancel,
   .submit {
     width: 70%;
   }
@@ -347,8 +334,7 @@
     font-weight: 500;
 }
 
-.submit:disabled,
-.cancel:disabled {
+.submit:disabled {
     opacity: 0.7;
     cursor: not-allowed;
 }
