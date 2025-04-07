@@ -110,7 +110,8 @@
 }
 
 .applyButton:hover {
-  background-color: #d43a66;
+  background-color: #E7005E;
+  opacity: 0.9;
 }
 
 .arrow {
@@ -139,7 +140,7 @@
   right: 50px;
   width: 60px; 
   height: 170px;
-  background-color: #e74c78;
+  background-color: #E7005E;
   color: white;
   font-size: 16px;
   font-weight: 500;

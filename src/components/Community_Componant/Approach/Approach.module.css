@@ -49,8 +49,9 @@
     flex: 1;
     min-width: 280px; /* Minimum width before wrapping */
     max-width: 350px; /* Maximum width to prevent overly wide cards */
-    padding: 20px;
+    padding: 10px;
     transition: all 0.3s ease;
+    box-sizing: border-box;
   }
   
   .cardItem:hover {
@@ -111,7 +112,6 @@
   
     .cardItem {
       min-width: 100%;
-      padding: 15px 10px;
     }
   
     .cardItem img {
@@ -141,6 +141,7 @@
       line-height: 34px;
       margin: 15px 0 25px;
     }
+
   
     .cardItem img {
       width: 40px;
