@@ -8,10 +8,10 @@ import DropdownIcon from "../../../Icon/dropdown.svg"
 const Events = () => {
   const [openSection, setOpenSection] = useState('dinners');
   const [contentHeights, setContentHeights] = useState({
-    dinners: null,
-    mixers: null,
-    workshops: null,
-    webinars: null
+    dinners: 'auto',
+    mixers: 'auto',
+    workshops: 'auto',
+    webinars: 'auto'
   });
 
   const contentRefs = {
@@ -21,17 +21,27 @@ const Events = () => {
     webinars: useRef(null)
   };
 
+  // Recalculate heights whenever window resizes or content changes
   useEffect(() => {
-    // Calculate and store heights for all content sections
-    const heights = {
-      
-    };
-    Object.keys(contentRefs).forEach(key => {
-      if (contentRefs[key].current) {
-        heights[key] = contentRefs[key].current.scrollHeight;
-      }
-    });
-    setContentHeights(heights);
+    function updateHeights() {
+      Object.keys(contentRefs).forEach(key => {
+        if (contentRefs[key].current) {
+          setContentHeights(prev => ({
+            ...prev,
+            [key]: contentRefs[key].current.scrollHeight + 20 // Add extra padding
+          }));
+        }
+      });
+    }
+
+    // Initial calculation
+    updateHeights();
+
+    // Setup resize listener for responsive behavior
+    window.addEventListener('resize', updateHeights);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', updateHeights);
   }, []);
 
   const toggleSection = (section) => {
@@ -47,7 +57,8 @@ const Events = () => {
       return {
         maxHeight: `${contentHeights[section]}px`,
         opacity: 1,
-        marginTop: '20px'
+        marginTop: '20px',
+        paddingBottom: '10px'
       };
     } else {
       return {
@@ -90,9 +101,10 @@ const Events = () => {
               <div 
                 className={style.accordionContent} 
                 style={getContentStyle('dinners')}
-                ref={contentRefs.dinners}
               >
-                <p>Small, intimate gatherings with handpicked changemakers to inspire deep conversations and lasting connections.</p>
+                <div ref={contentRefs.dinners}>
+                  <p>Small, intimate gatherings with handpicked changemakers to inspire deep conversations and lasting connections.</p>
+                </div>
               </div>
             </div>
 
@@ -112,9 +124,10 @@ const Events = () => {
               <div 
                 className={style.accordionContent} 
                 style={getContentStyle('mixers')}
-                ref={contentRefs.mixers}
               >
-                <p>High-energy, large-format networking evenings for purpose-driven professionals, creators, founders, and innovators.</p>
+                <div ref={contentRefs.mixers}>
+                  <p>High-energy, large-format networking evenings for purpose-driven professionals, creators, founders, and innovators.</p>
+                </div>
               </div>
             </div>
 
@@ -134,9 +147,10 @@ const Events = () => {
               <div 
                 className={style.accordionContent} 
                 style={getContentStyle('workshops')}
-                ref={contentRefs.workshops}
               >
-                <p>Hands-on sessions and deep dives into topics like conscious capitalism, stakeholder mapping, and impact strategy.</p>
+                <div ref={contentRefs.workshops}>
+                  <p>Hands-on sessions and deep dives into topics like conscious capitalism, stakeholder mapping, and impact strategy.</p>
+                </div>
               </div>
             </div>
 
@@ -156,9 +170,10 @@ const Events = () => {
               <div 
                 className={style.accordionContent} 
                 style={getContentStyle('webinars')}
-                ref={contentRefs.webinars}
               >
-                <p>Interactive digital sessions, Q&As with experts, and self-paced modules to bring conscious business learning to your screen.</p>
+                <div ref={contentRefs.webinars}>
+                  <p>Interactive digital sessions, Q&As with experts, and self-paced modules to bring conscious business learning to your screen.</p>
+                </div>
               </div>
             </div>
           </div>
